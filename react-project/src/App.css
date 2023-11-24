@@ -1,19 +1,21 @@
 * {
   font-family: "Quicksand", sans-serif;
   padding: 0 5px;
+  background-color: var(--background);
 }
 
 :root {
   /*Light mode*/
   --primary-light: #ccff99;
   --secondary-light: #ffde83;
+  --accent-light: #f9a065;
   --background-light: #6f3dcc;
   --text-light: #ffffff;
 
   /*Dark mode*/
   --primary-dark: #f26bf7;
-  --accent-dark: #65e8f9;
   --secondary-dark: #7639fa;
+  --accent-dark: #65e8f9;
   --background-dark: #232323;
   --text-dark: #dfdfdf;
 }
@@ -21,6 +23,7 @@
 body[data-theme="light"] {
   --primary: var(--primary-light);
   --secondary: var(--secondary-light);
+  --accent: var(--accent-light);
   --background: var(--background-light);
   --text: var(--text-light);
 }
@@ -28,13 +31,16 @@ body[data-theme="light"] {
 body[data-theme="dark"] {
   --primary: var(--primary-dark);
   --secondary: var(--secondary-dark);
+  --accent: var(--accent-dark);
   --background: var(--background-dark);
   --text: var(--text-dark);
 }
 
 .nav-bar {
-  background-color: var(--background-dark);
+  width: 100%;
+  background-color: var(--background);
   color: var(text);
+  box-shadow: 0 5px 10px var(--accent);
 }
 a {
   text-decoration: none;
@@ -44,6 +50,6 @@ a {
 }
 
 a:hover {
-  background-color: var(--secondary-dark);
-  color: var(--accent-dark);
+  background-color: var(--secondary);
+  color: var(--accent);
 }
