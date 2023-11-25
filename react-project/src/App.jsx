@@ -1,22 +1,26 @@
 import Navbar from "./components/Navbar";
-import BoxLayout from "./components/BoxLayout";
+
 import { useEffect, useState } from "react";
 
+import TilesContainer from "./components/TilesContainer";
+import Footer from "./components/Footer";
+
 const App = () => {
-  const [darkMode, setDarkMode] = useState(true);
+  const [lightMode, setLightMode] = useState(true);
 
   const toggleTheme = () => {
-    setDarkMode(!darkMode);
+    setLightMode(!lightMode);
   };
 
   useEffect(() => {
-    document.body.setAttribute("data-theme", darkMode ? "dark" : "light");
-  }, [darkMode]);
+    document.body.setAttribute("data-theme", lightMode ? "dark" : "light");
+  }, [lightMode]);
 
   return (
     <div id="theme">
-      <Navbar toggleTheme={toggleTheme} currentTheme={darkMode} />
-      <BoxLayout />
+      <Navbar toggleTheme={toggleTheme} currentTheme={lightMode} />
+      <TilesContainer />
+      <Footer />
     </div>
   );
 };

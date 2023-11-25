@@ -1,21 +1,15 @@
-* {
-  font-family: "Quicksand", sans-serif;
-  padding: 0 5px;
-  background-color: var(--background);
-}
-
 :root {
   /*Light mode*/
-  --primary-light: #ccff99;
-  --secondary-light: #ffde83;
-  --accent-light: #f9a065;
-  --background-light: #6f3dcc;
-  --text-light: #ffffff;
+  --primary-light: rgb(218, 20, 158);
+  --secondary-light: rgb(49, 210, 255);
+  --accent-light: rgb(82, 230, 23);
+  --background-light: #e6ab09;
+  --text-light: rgb(122, 4, 104);
 
   /*Dark mode*/
-  --primary-dark: #f26bf7;
+  --primary-dark: #f836ff;
   --secondary-dark: #7639fa;
-  --accent-dark: #65e8f9;
+  --accent-dark: #29e6ff;
   --background-dark: #232323;
   --text-dark: #dfdfdf;
 }
@@ -36,12 +30,32 @@ body[data-theme="dark"] {
   --text: var(--text-dark);
 }
 
+* {
+  font-family: Quicksand, sans-serif;
+}
+body {
+  background-color: var(--background);
+}
+
 .nav-bar {
   width: 100%;
   background-color: var(--background);
-  color: var(text);
-  box-shadow: 0 5px 10px var(--accent);
+  color: var(--text);
+  box-shadow: 0 5px 10px var(--primary);
 }
+
+.toggle-btn {
+  background-color: var(--primary);
+  color: var(--background);
+  border: var(--accent);
+  width: 50px;
+  font-weight: bold;
+}
+
+.toggle-btn:hover {
+  color: var(--accent);
+}
+
 a {
   text-decoration: none;
   color: var(--text);
@@ -51,5 +65,51 @@ a {
 
 a:hover {
   background-color: var(--secondary);
-  color: var(--accent);
+  color: var(--primary);
+}
+
+.tiles-container {
+  background-color: var(--primary);
+  padding: 5px;
+  width: 60%;
+  position: absolute;
+  align-items: center;
+  margin-top: 5%;
+  margin-left: 20%;
+}
+
+.ul-tiles {
+  display: inline-flex;
+  flex-wrap: wrap;
+  list-style: none;
+  width: 100%;
+  margin: auto;
+}
+.ul-tiles > li {
+  border: 1px solid black;
+}
+
+.li-tiles {
+  background-color: var(--accent);
+  padding: 10px;
+  text-align: center;
+  width: 250px;
+  height: 200px;
+}
+
+.animation-tile {
+  background-color: var(--primary);
+  padding: 10px;
+
+  text-align: center;
+  width: 250px;
+  height: 200px;
+}
+
+.coming-soon-tile {
+  background-color: var(--secondary);
+  padding: 10px;
+  text-align: center;
+  width: 250px;
+  height: 200px;
 }

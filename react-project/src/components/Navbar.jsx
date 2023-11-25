@@ -20,8 +20,8 @@ function Navbar({ toggleTheme, currentTheme }) {
 
         <Stack direction="row" spacing={8}>
           <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
           <Link href="/projects">Projects</Link>
+          <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
           <button className="toggle-btn" onClick={toggleTheme}>
             {currentTheme ? "Light" : "Dark"}
