@@ -113,3 +113,13 @@ a:hover {
   width: 250px;
   height: 200px;
 }
+
+.footer > h5 {
+  background-color: var(--background);
+  color: var(--text);
+  width: 100%;
+  text-align: right;
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+}
