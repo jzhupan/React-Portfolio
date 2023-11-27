@@ -4,7 +4,7 @@
   --secondary-light: rgb(49, 210, 255);
   --accent-light: rgb(82, 230, 23);
   --background-light: #e6ab09;
-  --text-light: rgb(122, 4, 104);
+  --text-light: rgb(107, 55, 0);
 
   /*Dark mode*/
   --primary-dark: #f836ff;
@@ -41,7 +41,7 @@ body {
   width: 100%;
   background-color: var(--background);
   color: var(--text);
-  box-shadow: 0 5px 10px var(--primary);
+  border-bottom: 1px solid var(--secondary);
 }
 
 .toggle-btn {
@@ -69,13 +69,13 @@ a:hover {
 }
 
 .tiles-container {
-  background-color: var(--primary);
-  padding: 5px;
-  width: 60%;
-  position: absolute;
+  max-width: 60%;
+  position: fixed;
   align-items: center;
-  margin-top: 5%;
-  margin-left: 20%;
+  top: 15%;
+  left: 20%;
+  padding: 10px;
+  bottom: 20%;
 }
 
 .ul-tiles {
@@ -83,7 +83,7 @@ a:hover {
   flex-wrap: wrap;
   list-style: none;
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
 }
 .ul-tiles > li {
   border: 1px solid black;
@@ -100,7 +100,6 @@ a:hover {
 .animation-tile {
   background-color: var(--primary);
   padding: 10px;
-
   text-align: center;
   width: 250px;
   height: 200px;
@@ -114,12 +113,54 @@ a:hover {
   height: 200px;
 }
 
+.pages-container {
+  width: 60%;
+  height: 75%;
+  position: absolute;
+  align-items: center;
+  padding: 10px;
+  margin: 0;
+  top: 100px;
+  left: 20%;
+  background-color: var(--secondary);
+  color: var(--text);
+}
+
+.projects > h3,
+p,
+li {
+  padding: 5px;
+}
+
+.pages-container > .contact-box {
+  margin: 1%;
+  padding-left: 2%;
+  width: 90%;
+  max-height: 500px;
+}
+
+.contact-box > textarea {
+  margin-top: 5px;
+  width: 100%;
+  max-height: 40vh;
+}
+.contact-box > button {
+  float: right;
+  padding: 5px;
+  margin: 10px;
+  left: 15px;
+  border-style: none;
+  background-color: var(--primary);
+  color: var(--accent);
+}
+
 .footer > h5 {
   background-color: var(--background);
   color: var(--text);
   width: 100%;
   text-align: right;
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   right: 10px;
+  margin-bottom: 0;
 }

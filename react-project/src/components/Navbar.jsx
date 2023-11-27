@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Box, Flex, Link, Stack, Image } from "@chakra-ui/react";
+
 import Logo from "../assets/logos-icon-btns/jzp-white-logo.png";
 
 function Navbar({ toggleTheme, currentTheme }) {
@@ -23,6 +24,7 @@ function Navbar({ toggleTheme, currentTheme }) {
           <Link href="/projects">Projects</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
+
           <button className="toggle-btn" onClick={toggleTheme}>
             {currentTheme ? "Light" : "Dark"}
           </button>
