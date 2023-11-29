@@ -1,166 +1,146 @@
-:root {
-  /*Light mode*/
-  --primary-light: rgb(218, 20, 158);
-  --secondary-light: rgb(49, 210, 255);
-  --accent-light: rgb(82, 230, 23);
-  --background-light: #e6ab09;
-  --text-light: rgb(107, 55, 0);
-
-  /*Dark mode*/
-  --primary-dark: #f836ff;
-  --secondary-dark: #7639fa;
-  --accent-dark: #29e6ff;
-  --background-dark: #232323;
-  --text-dark: #dfdfdf;
-}
-
-body[data-theme="light"] {
-  --primary: var(--primary-light);
-  --secondary: var(--secondary-light);
-  --accent: var(--accent-light);
-  --background: var(--background-light);
-  --text: var(--text-light);
-}
-
-body[data-theme="dark"] {
-  --primary: var(--primary-dark);
-  --secondary: var(--secondary-dark);
-  --accent: var(--accent-dark);
-  --background: var(--background-dark);
-  --text: var(--text-dark);
-}
-
-* {
-  font-family: Quicksand, sans-serif;
-}
-body {
-  background-color: var(--background);
-}
-
-.nav-bar {
-  width: 100%;
-  background-color: var(--background);
-  color: var(--text);
-  border-bottom: 1px solid var(--secondary);
-}
-
-.toggle-btn {
-  background-color: var(--primary);
-  color: var(--background);
-  border: var(--accent);
-  width: 50px;
-  font-weight: bold;
-}
-
-.toggle-btn:hover {
-  color: var(--accent);
-}
-
-a {
-  text-decoration: none;
-  color: var(--text);
-  padding: 10px;
-  font-weight: bold;
-}
-
-a:hover {
-  background-color: var(--secondary);
-  color: var(--primary);
-}
-
-.tiles-container {
-  max-width: 60%;
-  position: fixed;
-  align-items: center;
-  top: 15%;
-  left: 20%;
-  padding: 10px;
-  bottom: 20%;
-}
-
-.ul-tiles {
-  display: inline-flex;
-  flex-wrap: wrap;
-  list-style: none;
-  width: 100%;
+#root {
+  max-width: 1280px;
   margin: 0 auto;
-}
-.ul-tiles > li {
-  border: 1px solid black;
-}
-
-.li-tiles {
-  background-color: var(--accent);
-  padding: 10px;
+  padding: 2rem;
   text-align: center;
-  width: 250px;
-  height: 200px;
 }
 
-.animation-tile {
-  background-color: var(--primary);
-  padding: 10px;
-  text-align: center;
-  width: 250px;
-  height: 200px;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
 }
 
-.coming-soon-tile {
-  background-color: var(--secondary);
-  padding: 10px;
-  text-align: center;
-  width: 250px;
-  height: 200px;
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
 }
 
-.pages-container {
-  width: 60%;
-  height: 75%;
-  position: absolute;
-  align-items: center;
-  padding: 10px;
-  margin: 0;
-  top: 100px;
-  left: 20%;
-  background-color: var(--secondary);
-  color: var(--text);
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.projects > h3,
-p,
-li {
-  padding: 5px;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.pages-container > .contact-box {
-  margin: 1%;
-  padding-left: 2%;
-  width: 90%;
-  max-height: 500px;
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
 
-.contact-box > textarea {
-  margin-top: 5px;
-  width: 100%;
-  max-height: 40vh;
-}
-.contact-box > button {
-  float: right;
-  padding: 5px;
-  margin: 10px;
-  left: 15px;
-  border-style: none;
-  background-color: var(--primary);
-  color: var(--accent);
+.card {
+  padding: 2em;
 }
 
-.footer > h5 {
-  background-color: var(--background);
-  color: var(--text);
-  width: 100%;
-  text-align: right;
-  position: fixed;
-  bottom: 0px;
-  right: 10px;
-  margin-bottom: 0;
+.read-the-docs {
+  color: #888;
+}
+
+/* App.css */
+
+@keyframes shrink-halfway {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.5);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-5px) rotate(5deg);
+  }
+
+  50% {
+    transform: translateX(5px) rotate(-5deg);
+  }
+
+  75% {
+    transform: translateX(-5px) rotate(5deg);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes flip {
+  0% {
+    transform: scaleX(1);
+  }
+
+  100% {
+    transform: scaleX(-1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-30px);
+  }
+
+  60% {
+    transform: translateY(-15px);
+  }
 }
