@@ -173,12 +173,14 @@ function App() {
       <Modal
         isOpen={isModalOpen}
         onClose={handleCloseModal}
-        size="md"
+        size="xl"
         isCentered
       >
         <ModalOverlay />
-        <ModalContent height="45%" maxW="80%">
-          <ModalHeader>{modalHeaders[selectedSquare]}</ModalHeader>
+        <ModalContent height="90%" maxW="80%">
+          <ModalHeader size="md" fontWeight="bold">
+            {modalHeaders[selectedSquare]}
+          </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Text>{modalContents[selectedSquare]}</Text>
