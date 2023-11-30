@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   ChakraProvider,
   Box,
@@ -13,6 +12,7 @@ import {
   Text,
   CSSReset,
 } from "@chakra-ui/react";
+import { useState } from "react";
 import Project1 from "./Project1";
 import Project2 from "./Project2";
 import Contact from "./Contact";
@@ -35,20 +35,16 @@ const theme = extendTheme({
   },
 });
 
-function getRandomColor() {
-  const colors = [
-    "red.400",
-    "blue.400",
-    "green.400",
-    "purple.400",
-    "orange.400",
-    "pink.400",
-    "teal.400",
-    "yellow.400",
-  ];
-  const randomIndex = Math.floor(Math.random() * colors.length);
-  return colors[randomIndex];
-}
+const colors = [
+  "red.500",
+  "cyan.300",
+  "green.300",
+  "purple.400",
+  "orange.300",
+  "pink.500",
+  "teal.300",
+  "yellow.300",
+];
 
 const animations = [
   "shrink-halfway",
@@ -61,17 +57,12 @@ const animations = [
   "jelly",
 ];
 
-function getRandomAnimation() {
-  const randomIndex = Math.floor(Math.random() * animations.length);
-  return animations[randomIndex];
-}
-
-function getRandomAnimationsArray() {
-  const animationsArray = [];
-  for (let i = 0; i < 8; i++) {
-    animationsArray.push(getRandomAnimation());
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
   }
-  return animationsArray;
+  return array;
 }
 
 function App() {
@@ -122,7 +113,11 @@ function App() {
   const handleAnimationEnd = (event) => {
     event.target.classList.remove("animate"); // Remove the animation class after it ends
   };
-  const animationsArray = getRandomAnimationsArray();
+
+  const animatedSquares = [2, 4, 5, 6];
+  const colorChangeSquares = [0, 1, 2, 3, 4, 5, 6, 7];
+  const shuffledAnimations = shuffleArray([...animations]);
+  const shuffledColors = shuffleArray([...colors]);
 
   return (
     <ChakraProvider theme={theme}>
@@ -134,33 +129,46 @@ function App() {
         alignItems="center"
         mt="auto"
       >
-        {[...Array(8)].map((_, index) => (
-          <Box
-            key={index}
-            w="200px"
-            h="200px"
-            bg="blue.400"
-            _hover={{
-              cursor: "pointer",
-              animation: `${animationsArray[index]} 0.5s ease forwards`,
-            }}
-            onClick={() => handleSquareClick(index)}
-            display="flex"
-            flexDirection="column"
-            justifyContent="center"
-            alignItems="center"
-            onAnimationEnd={handleAnimationEnd}
-          >
-            <Text
-              fontSize="lg"
-              fontWeight="bold"
-              color="white"
-              textAlign="center"
+        {[...Array(8)].map((_, index) => {
+          const isAnimated = animatedSquares.includes(index);
+          const shouldChangeColor = colorChangeSquares.includes(index);
+          const animationStyle = isAnimated
+            ? {
+                animation: `${
+                  shuffledAnimations[index % shuffledAnimations.length]
+                } 0.5s ease forwards`,
+              }
+            : {};
+          const colorIndex = colorChangeSquares.indexOf(index);
+          const hoverColor = shouldChangeColor
+            ? shuffledColors[colorIndex]
+            : "blue.400";
+
+          return (
+            <Box
+              key={index}
+              w="200px"
+              h="200px"
+              bg="blue.400"
+              _hover={{ cursor: "pointer", ...animationStyle, bg: hoverColor }}
+              onClick={() => handleSquareClick(index)}
+              display="flex"
+              flexDirection="column"
+              justifyContent="center"
+              alignItems="center"
+              onAnimationEnd={handleAnimationEnd}
             >
-              {squareTexts[index]}
-            </Text>
-          </Box>
-        ))}
+              <Text
+                fontSize="lg"
+                fontWeight="bold"
+                color="white"
+                textAlign="center"
+              >
+                {squareTexts[index]}
+              </Text>
+            </Box>
+          );
+        })}
       </Grid>
       <Modal
         isOpen={isModalOpen}
