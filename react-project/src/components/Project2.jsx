@@ -6,9 +6,9 @@ import {
   Image,
   useColorModeValue,
   Stack,
-  StackDivider,
   keyframes,
-  SimpleGrid,
+  UnorderedList,
+  ListItem,
 } from "@chakra-ui/react";
 import { css } from "@emotion/react";
 import VideoPlayer from "./VideoPlayer";
@@ -27,106 +27,124 @@ const Project2 = () => {
 
   return (
     <div>
-      <Stack divider={<StackDivider />} spacing="4" width="full" mx="auto">
-        <Box mx="auto" width="full">
-          <Heading size="xs" textTransform="uppercase">
+      <Stack spacing="4" width="full" mx="auto">
+        <Box mx="auto" width="100%">
+          <Heading
+            s
+            size="xs"
+            textTransform="uppercase"
+            textAlign={"center"}
+            mt={"15px"}
+          >
             Summary:
           </Heading>
-          <SimpleGrid columns={2} spacing={12} mx="auto">
-            <Box mx={"auto"}>
-              <Text pt="2" fontSize="sm">
-                <li>
-                  Created a user friendly platform allowing users to upload
-                  images containing text, crop text images, and translate them
-                  to English.
-                </li>
-                <li>
-                  Implemented cost-effective development by utilizing free
-                  resources, making the app accessible for a wider audience.
-                </li>
-                <li>
-                  Developed a back-end system for storing uploaded images
-                  locally and ensured multilingual support.
-                </li>
-                <li>
-                  For a detailed overview and a demonstration of supported
-                  languages, please refer to the ReadMe file.
-                </li>
-              </Text>
-            </Box>
-            <Box mx="auto">
-              <Heading size="xs" textTransform="uppercase" m={1}>
-                Notable Libraries / Frameworks used:
-              </Heading>
-              <Flex
-                width="full"
-                maxW="md"
-                mx="auto"
-                px="4"
-                py="2"
-                borderWidth="1px"
-                borderRadius="lg"
-                overflow="hidden"
-                borderColor={borderColor}
-                boxShadow="lg"
-                justify="space-around"
-                align="center"
-              >
-                <Image
-                  src={expressLogo}
-                  boxSize="50px"
-                  alt="React"
-                  transition="2s ease-in-out"
-                  _hover={{
-                    transform: "scale(1.2)",
-                  }}
-                  css={css`
-                    animation: ${slideIn} 1s ease-out forwards;
-                  `}
-                />
-                <Image
-                  src={bootstrapLogo}
-                  boxSize="50px"
-                  alt="Next.js"
-                  transition="2s ease-in-out"
-                  _hover={{
-                    transform: "scale(1.2)",
-                  }}
-                  css={css`
-                    animation: ${slideIn} 1s ease-out forwards;
-                  `}
-                />
-                <Image
-                  src={axiosLogo}
-                  boxSize="50px"
-                  alt="Axios"
-                  transition="2s ease-in-out"
-                  _hover={{
-                    transform: "scale(1.2)",
-                  }}
-                  css={css`
-                    animation: ${slideIn} 1s ease-out forwards;
-                  `}
-                />
-                <Image
-                  src={jsLogo}
-                  boxSize="50px"
-                  alt="Chakra UI"
-                  transition="2s ease-in-out"
-                  _hover={{
-                    transform: "scale(1.2)",
-                  }}
-                  css={css`
-                    animation: ${slideIn} 1s ease-out forwards;
-                  `}
-                />
-              </Flex>
-              <Text pt="2" fontSize="sm" textAlign={"center"}></Text>
-            </Box>
-          </SimpleGrid>
+
+          <Box mx={"auto"} maxW={"80%"}>
+            <Text pt="2" textAlign={"justify"}>
+              I developed an innovative Optical Character Recognition (OCR)
+              application that seamlessly transforms images into editable text
+              and offers translation capabilities. This user-centric platform
+              enables users to effortlessly upload images with text, precisely
+              crop the text areas, and translate the content into English. Key
+              highlights of the project include:
+              <UnorderedList>
+                <ListItem>
+                  User-Friendly Interface: Designed with a focus on simplicity
+                  and efficiency, the app provides an intuitive experience,
+                  allowing users to navigate and perform tasks with ease.
+                </ListItem>
+                <ListItem>
+                  Cost-Effective Development: I strategically leveraged free
+                  resources during the development process, which not only
+                  optimized costs but also made the application more accessible
+                  to a broader audience.
+                </ListItem>
+                <ListItem>
+                  Robust Back-End System: The app features a sophisticated
+                  back-end infrastructure that securely stores uploaded images
+                  locally. This system is designed to support multilingual
+                  functionality, catering to a diverse user base.
+                </ListItem>
+                <ListItem>
+                  Comprehensive Language Support: For an extensive overview and
+                  demonstration of the various languages supported by the app, I
+                  encourage you to refer to the ReadMe file included with the
+                  application.
+                </ListItem>
+              </UnorderedList>
+            </Text>
+          </Box>
+        </Box>
+        <Box mx="auto">
+          <Heading size="xs" textTransform="uppercase" m={1}>
+            Notable Libraries / Frameworks used:
+          </Heading>
+          <Flex
+            width="full"
+            maxW="md"
+            mx="auto"
+            px="4"
+            py="2"
+            borderWidth="1px"
+            borderRadius="lg"
+            overflow="hidden"
+            borderColor={borderColor}
+            boxShadow="lg"
+            justify="space-around"
+            align="center"
+          >
+            <Image
+              src={expressLogo}
+              boxSize="50px"
+              alt="React"
+              transition="2s ease-in-out"
+              _hover={{
+                transform: "scale(1.2)",
+              }}
+              css={css`
+                animation: ${slideIn} 1s ease-out forwards;
+              `}
+            />
+            <Image
+              src={bootstrapLogo}
+              boxSize="50px"
+              alt="Next.js"
+              transition="2s ease-in-out"
+              _hover={{
+                transform: "scale(1.2)",
+              }}
+              css={css`
+                animation: ${slideIn} 1s ease-out forwards;
+              `}
+            />
+            <Image
+              src={axiosLogo}
+              boxSize="50px"
+              alt="Axios"
+              transition="2s ease-in-out"
+              _hover={{
+                transform: "scale(1.2)",
+              }}
+              css={css`
+                animation: ${slideIn} 1s ease-out forwards;
+              `}
+            />
+            <Image
+              src={jsLogo}
+              boxSize="50px"
+              alt="Chakra UI"
+              transition="2s ease-in-out"
+              _hover={{
+                transform: "scale(1.2)",
+              }}
+              css={css`
+                animation: ${slideIn} 1s ease-out forwards;
+              `}
+            />
+          </Flex>
         </Box>
 
-        <Box mx="auto">
+        <Box mx="auto" textAlign="center">
           <VideoPlayer />
         </Box>
       </Stack>

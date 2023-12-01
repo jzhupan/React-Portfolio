@@ -27,7 +27,7 @@ const VideoPlayer = () => {
 
   return (
     <Flex justifyContent="center" alignItems="center" height="100%">
-      <Box position="relative" maxW="55%" width="100%">
+      <Box position="relative" boxSize={"95%"} mx="auto" mb={2}>
         <video
           ref={videoRef}
           src="/src/assets/project-img/demo.mp4"

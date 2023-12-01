@@ -1,22 +1,22 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import "./App.css";
 import Squares from "./Components/Squares";
-import { extendTheme } from "@chakra-ui/react";
 
-const theme = extendTheme({
-  colors: {
-    brand: {
-      grey: "#1A202C",
-      white: "#FFFFFF",
-      cyan: "#76E4F7",
-      pink: "#D53F8C",
-      yellow: "##F6E05E",
-    },
+const colors = {
+  brand: {
+    grey: "#1A202C",
+    black: "#000000",
+    white: "#FFFFFF",
+    cyan: "#76E4F7",
+    pink: "#D53F8C",
+    yellow: "#FAF089",
+    purple: "#9F7AEA",
   },
-  fonts: {
-    body: "Quicksand, sans-serif",
-    heading: "Quicksand, sans-serif",
-  },
+};
+
+const fonts = {
+  body: "Quicksand, sans-serif",
+  heading: "Quicksand, sans-serif",
   fontSizes: {
     xd: "10px",
     sm: "12px",
@@ -30,6 +30,18 @@ const theme = extendTheme({
     medium: 500,
     semibold: 600,
     bold: 700,
+  },
+};
+
+const theme = extendTheme({
+  colors,
+  fonts,
+  styles: {
+    global: {
+      body: {
+        bg: "brand.grey",
+      },
+    },
   },
 });
 

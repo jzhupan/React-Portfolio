@@ -139,10 +139,9 @@ function App() {
           const shouldChangeColor = colorChangeSquares.includes(index);
           const animationStyle = isAnimated
             ? {
-                animation: `${
-                  shuffledAnimations[index % shuffledAnimations.length]
+              animation: `${shuffledAnimations[index % shuffledAnimations.length]
                 } 0.5s ease forwards`,
-              }
+            }
             : {};
           const colorIndex = colorChangeSquares.indexOf(index);
           const hoverColor = shouldChangeColor
@@ -182,7 +181,7 @@ function App() {
         isCentered
       >
         <ModalOverlay />
-        <ModalContent height="95%" maxW="80%" margin={1}>
+        <ModalContent height="95%" maxW="80%" margin={1} overflowY={"auto"}>
           <ModalHeader
             size="lg"
             fontSize={24}

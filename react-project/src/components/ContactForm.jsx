@@ -6,6 +6,7 @@ import {
   FormLabel,
   Input,
   Textarea,
+  Stack,
   VStack,
   Box,
 } from "@chakra-ui/react";
@@ -26,44 +27,55 @@ function ContactForm() {
   };
 
   return (
-    <Box p={5} shadow="md" borderWidth="1px" borderRadius="md">
-      <form onSubmit={handleSubmit}>
-        <VStack spacing={4} align="flex-start">
-          <FormControl isRequired>
-            <FormLabel htmlFor="email">Your Email</FormLabel>
-            <Input
-              id="email"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </FormControl>
+    <div>
+      <Stack spacing="4" width="full" mx="auto">
+        <Box
+          mx="auto"
+          width="100%"
+          p={5}
+          shadow="md"
+          borderWidth="1px"
+          borderRadius="md"
+        >
+          <form onSubmit={handleSubmit}>
+            <VStack spacing={4} align="flex-start">
+              <FormControl isRequired>
+                <FormLabel htmlFor="email">Your Email</FormLabel>
+                <Input
+                  id="email"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </FormControl>
 
-          <FormControl isRequired>
-            <FormLabel htmlFor="subject">Subject</FormLabel>
-            <Input
-              id="subject"
-              type="text"
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
-            />
-          </FormControl>
+              <FormControl isRequired>
+                <FormLabel htmlFor="subject">Subject</FormLabel>
+                <Input
+                  id="subject"
+                  type="text"
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
+                />
+              </FormControl>
 
-          <FormControl isRequired>
-            <FormLabel htmlFor="message">Message</FormLabel>
-            <Textarea
-              id="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-            />
-          </FormControl>
+              <FormControl isRequired>
+                <FormLabel htmlFor="message">Message</FormLabel>
+                <Textarea
+                  id="message"
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                />
+              </FormControl>
 
-          <Button type="submit" colorScheme="blue">
-            Send Email
-          </Button>
-        </VStack>
-      </form>
-    </Box>
+              <Button type="submit" colorScheme="blue">
+                Send Email
+              </Button>
+            </VStack>
+          </form>
+        </Box>
+      </Stack>
+    </div>
   );
 }
 
