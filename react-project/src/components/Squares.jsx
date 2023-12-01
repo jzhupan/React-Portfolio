@@ -15,7 +15,7 @@ import {
 import { useState } from "react";
 import Project1 from "./Project1";
 import Project2 from "./Project2";
-import Contact from "./Contact";
+import ContactForm from "./ContactForm";
 import About from "./About";
 
 const theme = extendTheme({
@@ -24,7 +24,7 @@ const theme = extendTheme({
       body: {
         margin: 0,
         padding: 0,
-        bg: "gray.100",
+        bg: "brand[grey]",
         height: "100vh",
         display: "flex",
         flexDirection: "column",
@@ -88,21 +88,26 @@ function App() {
     "Animation/GIF placeholder",
     "Coming soon",
     "Coming Soon",
-    <Contact key="contact-page" />,
+    <ContactForm key="contact-page" />,
   ];
 
   const modalHeaders = [
     "Financial Pulse Dashboard",
     "Image to Text Translator App",
-    "",
+    "Animation placeholder",
+    "Art Meets Code: Jennie's Creative Coding Odyssey",
+    "Animation placeholder",
     "Coming Soon",
     "Coming Soon",
-    "Contact",
+    "For inquiries please email to contactme@jenniedev.com",
   ];
 
+  const modalEnabledSquares = [0, 1, 3, 7];
   const handleSquareClick = (index) => {
-    setSelectedSquare(index);
-    setIsModalOpen(true);
+    if (modalEnabledSquares.includes(index)) {
+      setSelectedSquare(index);
+      setIsModalOpen(true);
+    }
   };
 
   const handleCloseModal = () => {
@@ -177,8 +182,15 @@ function App() {
         isCentered
       >
         <ModalOverlay />
-        <ModalContent height="90%" maxW="80%">
-          <ModalHeader size="md" fontWeight="bold">
+        <ModalContent height="95%" maxW="80%" margin={1}>
+          <ModalHeader
+            size="lg"
+            fontSize={24}
+            fontWeight="bold"
+            marginTop={3}
+            paddingBottom={-5}
+            textAlign="center"
+          >
             {modalHeaders[selectedSquare]}
           </ModalHeader>
           <ModalCloseButton />
