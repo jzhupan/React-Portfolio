@@ -28,22 +28,25 @@ const About = () => {
           </Heading>
           <Box mx={"auto"} maxW={"80%"}>
             <Text pt="2" textAlign={"justify"}>
-              After several years in freelance illustration and graphic design,
-              I made a decisive transition into the realm of programming, with a
-              focus on front-end development. While I anticipated a smooth
-              transition, the journey proved to be both challenging and
+              After several years in{" "}
+              <strong>freelance illustration and graphic design</strong>, I made
+              a decisive transition into the realm of programming, with a focus
+              on <strong>front-end development</strong>. While I anticipated a
+              smooth transition, the journey proved to be both challenging and
               invigorating, pushing me out of my comfort zone and onto a path of
-              continuous growth and learning. In my commitment to this new
-              career path, I have adopted a disciplined routine of daily GitHub
-              commits. This practice goes beyond mere code submissions; it
-              represents my dedication to consistent engagement in development
-              work and my commitment to perpetual improvement. Additionally, I
-              am constantly refining my front-end design skills. Leveraging my
+              <strong>continuous growth and learning</strong>. In my commitment
+              to this new career path, I have adopted a disciplined routine of
+              daily <strong>GitHub commits</strong>. This practice goes beyond
+              mere code submissions; it represents my dedication to consistent
+              engagement in development work and my commitment to{" "}
+              <strong>perpetual improvement</strong>. Additionally, I am
+              constantly refining my front-end design skills. Leveraging my
               expertise in illustration and graphic design, my goal is to craft
-              interfaces that are visually compelling, functional, and
-              user-centric. Every step in this journey has been instrumental in
-              sharpening my technical abilities and reaffirming my passion for
-              evolving as a developer.
+              interfaces that are{" "}
+              <strong>visually compelling, functional, and user-centric</strong>
+              . Every step in this journey has been instrumental in sharpening
+              my technical abilities and reaffirming my passion for evolving as
+              a developer.
             </Text>
             <Heading
               size="xs"
@@ -54,18 +57,19 @@ const About = () => {
               Career Goal:
             </Heading>
             <Text pt="2" textAlign={"justify"}>
-              As an enthusiastic, self-taught Front-End Developer, Designer, and
-              Illustrator, I offer a unique fusion of creative talent and
-              technical acumen, cultivated through hands-on experience. My foray
-              into technology is characterized by an unwavering dedication to
-              mastering new skills and expanding my knowledge base. I am eager
-              to collaborate with dynamic teams, confront complex challenges,
-              and design functional, visually appealing websites. My primary
-              objective is to deliver digital solutions that not only align with
-              business objectives but also captivate and engage their target
-              audience. I am committed to ensuring that each project I undertake
-              surpasses expectations, thereby contributing meaningful and
-              impactful work in the digital landscape.
+              As an enthusiastic, self-taught{" "}
+              <strong>Front-End Developer, Designer, and Illustrator,</strong> I
+              offer a unique fusion of creative talent and technical acumen,
+              cultivated through hands-on experience. My foray into technology
+              is characterized by an unwavering dedication to mastering new
+              skills and expanding my knowledge base. I am eager to collaborate
+              with dynamic teams, confront complex challenges, and design
+              functional, <strong>visually appealing websites</strong>. My
+              primary objective is to deliver digital solutions that not only
+              align with business objectives but also captivate and engage their
+              target audience. I am committed to ensuring that each project I
+              undertake surpasses expectations, thereby contributing meaningful
+              and impactful work in the digital landscape.
             </Text>
           </Box>
         </Box>

@@ -30,6 +30,7 @@ const theme = extendTheme({
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        fontFamily: "Quicksand, sans-serif",
       },
     },
   },
@@ -99,7 +100,7 @@ function App() {
     "Animation placeholder",
     "Coming Soon",
     "Coming Soon",
-    "For inquiries please email to contactme@jenniedev.com",
+    "Your Vision, Our Creativity: Contact Me to Begin!",
   ];
 
   const modalEnabledSquares = [0, 1, 3, 7];
@@ -139,9 +140,10 @@ function App() {
           const shouldChangeColor = colorChangeSquares.includes(index);
           const animationStyle = isAnimated
             ? {
-              animation: `${shuffledAnimations[index % shuffledAnimations.length]
+                animation: `${
+                  shuffledAnimations[index % shuffledAnimations.length]
                 } 0.5s ease forwards`,
-            }
+              }
             : {};
           const colorIndex = colorChangeSquares.indexOf(index);
           const hoverColor = shouldChangeColor

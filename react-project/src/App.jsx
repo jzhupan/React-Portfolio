@@ -16,7 +16,7 @@ const colors = {
 
 const fonts = {
   body: "Quicksand, sans-serif",
-  heading: "Quicksand, sans-serif",
+  heading: "Yeseva One', serif",
   fontSizes: {
     xd: "10px",
     sm: "12px",

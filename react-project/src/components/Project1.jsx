@@ -63,31 +63,31 @@ const Project1 = () => {
           </Heading>
           <Box mx={"auto"} maxW={"80%"}>
             <Text pt="2" textAlign={"justify"}>
-              Developed a user-centric Home page and a dynamic router page for
-              efficient display of stocks and financial data, sourced from
-              Financial Modeling Prep's API. Engineered a feature-rich
-              interface, including:
+              Developed a user-centric <strong>Home page</strong> and a dynamic
+              router page for efficient display of stocks and financial data,
+              sourced from <strong>Financial Modeling Prep's API</strong>.
+              Engineered a feature-rich interface, including:
               <UnorderedList>
                 <ListItem>
-                  A comprehensive navigation bar for easy access to various
-                  sections.
+                  A comprehensive <strong>navigation bar</strong> for easy
+                  access to various sections.
                 </ListItem>
                 <ListItem>
-                  An intuitive search bar to quickly find specific stocks or
-                  financial data.
+                  An intuitive <strong>search bar</strong> to quickly find
+                  specific stocks or financial data.
                 </ListItem>
                 <ListItem>
-                  A visually engaging marquee to highlight important financial
-                  news or trends.
+                  A visually engaging <strong>marquee</strong> to highlight
+                  important financial news or trends.
                 </ListItem>
                 <ListItem>
-                  A dedicated news section to keep users updated with the latest
-                  financial news.
+                  A dedicated <strong>news section</strong> to keep users
+                  updated with the latest financial news.
                 </ListItem>
                 <ListItem>
-                  A sidebar displaying real-time stock data, such as current
-                  prices and percentage changes, for at-a-glance market
-                  insights.
+                  A sidebar displaying <strong>real-time stock data</strong>,
+                  such as current prices and percentage changes, for at-a-glance
+                  market insights.
                 </ListItem>
               </UnorderedList>
             </Text>

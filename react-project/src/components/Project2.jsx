@@ -41,35 +41,38 @@ const Project2 = () => {
 
           <Box mx={"auto"} maxW={"80%"}>
             <Text pt="2" textAlign={"justify"}>
-              I developed an innovative Optical Character Recognition (OCR)
-              application that seamlessly transforms images into editable text
-              and offers translation capabilities. This user-centric platform
-              enables users to effortlessly upload images with text, precisely
-              crop the text areas, and translate the content into English. Key
-              highlights of the project include:
+              I developed an innovative{" "}
+              <strong>Optical Character Recognition (OCR) application</strong>{" "}
+              that seamlessly transforms images into editable text and offers
+              translation capabilities. This <strong>user-centric</strong>{" "}
+              platform enables users to effortlessly upload images with text,
+              precisely crop the text areas, and translate the content into
+              English. Key highlights of the project include:
               <UnorderedList>
                 <ListItem>
-                  User-Friendly Interface: Designed with a focus on simplicity
-                  and efficiency, the app provides an intuitive experience,
-                  allowing users to navigate and perform tasks with ease.
+                  <strong>User-Friendly Interface:</strong> Designed with a
+                  focus on simplicity and efficiency, the app provides an
+                  intuitive experience, allowing users to navigate and perform
+                  tasks with ease.
                 </ListItem>
                 <ListItem>
-                  Cost-Effective Development: I strategically leveraged free
-                  resources during the development process, which not only
-                  optimized costs but also made the application more accessible
-                  to a broader audience.
+                  <strong>Cost-Effective Development:</strong> I strategically
+                  leveraged free resources during the development process, which
+                  not only optimized costs but also made the application more
+                  accessible to a broader audience.
                 </ListItem>
                 <ListItem>
                   Robust Back-End System: The app features a sophisticated
                   back-end infrastructure that securely stores uploaded images
-                  locally. This system is designed to support multilingual
-                  functionality, catering to a diverse user base.
+                  locally. This system is designed to support{" "}
+                  <strong>multilingual functionality</strong>, catering to a
+                  diverse user base.
                 </ListItem>
                 <ListItem>
-                  Comprehensive Language Support: For an extensive overview and
-                  demonstration of the various languages supported by the app, I
-                  encourage you to refer to the ReadMe file included with the
-                  application.
+                  <strong>Comprehensive Language Support:</strong> For an
+                  extensive overview and demonstration of the various languages
+                  supported by the app, I encourage you to refer to the{" "}
+                  <strong>ReadMe</strong> file included with the application.
                 </ListItem>
               </UnorderedList>
             </Text>
