@@ -12,6 +12,10 @@ import {
 } from "@chakra-ui/react";
 import { css } from "@emotion/react";
 import VideoPlayer from "./VideoPlayer";
+import expressLogo from "../assets/tech-icons/Express.png";
+import bootstrapLogo from "../assets/tech-icons/Bootstrap.png";
+import axiosLogo from "../assets/tech-icons/Axios.png";
+import jsLogo from "../assets/tech-icons/JavaScript.png";
 
 const slideIn = keyframes`
   from { transform: translateX(-20px); opacity: 0; }
@@ -19,10 +23,6 @@ const slideIn = keyframes`
 `;
 
 const Project2 = () => {
-  const expressLogo = "/src/assets/tech-icons/Express.png";
-  const bootstrapLogo = "/src/assets/tech-icons/Bootstrap.png";
-  const axiosLogo = "/src/assets/tech-icons/Axios.png";
-  const jsLogo = "/src/assets/tech-icons/JavaScript.png";
   const borderColor = useColorModeValue("purple.500", "pink.300");
 
   return (
