@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { Box, IconButton, useBoolean, Flex } from "@chakra-ui/react";
 import { FiPlay, FiPause, FiMaximize2 } from "react-icons/fi";
+import video from "../assets/project-img/demo.mp4";
 
 const VideoPlayer = () => {
   const [isPlaying, setIsPlaying] = useBoolean();
@@ -30,7 +31,7 @@ const VideoPlayer = () => {
       <Box position="relative" boxSize={"95%"} mx="auto" mb={2}>
         <video
           ref={videoRef}
-          src="/src/assets/project-img/demo.mp4"
+          src={video}
           alt="Demo video of Image to Text Translator App"
           loop
           muted

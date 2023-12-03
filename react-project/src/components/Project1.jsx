@@ -15,6 +15,13 @@ import {
 import { css } from "@emotion/react";
 import { useState } from "react";
 
+import reactLogo from "../assets/tech-icons/React.png";
+import nextLogo from "../assets/tech-icons/Next.js.png";
+import axiosLogo from "../assets/tech-icons/Axios.png";
+import chakraUILogo from "../assets/tech-icons/chakraui.png";
+import projectHome from "../assets/project-img/homeSS.png";
+import projectStockSearch from "../assets/project-img/StockSearchSS.png";
+
 const slideIn = keyframes`
   from { transform: translateX(-20px); opacity: 0; }
   to { transform: translateX(0); opacity: 1; }
@@ -23,11 +30,11 @@ const slideIn = keyframes`
 const Project1 = () => {
   const images = [
     {
-      src: "/src/assets/project-img/homeSS.png",
+      src: projectHome,
       alt: "Screenshot of financial pulse dashboard's Homepage",
     },
     {
-      src: "/src/assets/project-img/StockSearchSS.png",
+      src: projectStockSearch,
       alt: "Screenshot of a Searchable stock after using the search bar",
     },
   ];
@@ -43,10 +50,6 @@ const Project1 = () => {
       (prevIndex) => (prevIndex - 1 + images.length) % images.length
     );
   };
-  const reactLogo = "/src/assets/tech-icons/React.png";
-  const nextLogo = "/src/assets/tech-icons/Next.js.png";
-  const axiosLogo = "/src/assets/tech-icons/Axios.png";
-  const chakraUILogo = "/src/assets/tech-icons/chakraui.png";
   const borderColor = useColorModeValue("purple.500", "pink.300");
 
   return (
@@ -163,19 +166,22 @@ const Project1 = () => {
           </Flex>
         </Box>
         {/* Image Section */}
-        <Box mx="auto" textAlign="center" boxSize={"100%"} mb={2}>
+        <Box mx="auto" textAlign="center" boxSize={"100%"} mb={1}>
           <Link href={images[currentImageIndex].src} isExternal>
             <Image
               src={images[currentImageIndex].src}
               alt={images[currentImageIndex].alt}
               objectFit="contain"
+              mb={2}
             />
           </Link>
 
-          <Button mr={4} onClick={prevImage}>
+          <Button mr={4} onClick={prevImage} bg={"purple.400"} color={"white"}>
             Back
           </Button>
-          <Button onClick={nextImage}>Forward</Button>
+          <Button onClick={nextImage} bg={"purple.400"} color={"white"}>
+            Forward
+          </Button>
         </Box>
       </Stack>
     </div>
