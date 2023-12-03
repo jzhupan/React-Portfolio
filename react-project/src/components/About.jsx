@@ -7,6 +7,7 @@ import {
   Button,
   Stack,
   Center,
+  useColorModeValue,
   // HStack,
   // Icon,
 } from "@chakra-ui/react";
@@ -15,7 +16,7 @@ import {
 const About = () => {
   const resumeLink =
     "https://drive.google.com/file/d/1XHntpzmtXEWaOoaQ0G2fdzZe5QmJFea0/preview";
-
+  const borderColor = useColorModeValue("purple.500", "pink.300");
   return (
     <div>
       <Stack spacing="4" width="full" mx="auto">
@@ -77,13 +78,19 @@ const About = () => {
         </Box>
 
         <Box mx="auto" textAlign="center" boxSize={"20%"} mb={2}>
-          <Box p={5} shadow="md" borderWidth="1px" borderRadius="md">
+          <Box
+            p={5}
+            shadow="md"
+            borderWidth="1px"
+            borderRadius="md"
+            borderColor={borderColor}
+          >
             <Heading mb={4} textAlign="center" size="sm">
               View My Resume
             </Heading>
 
             <Button
-              colorScheme="pink"
+              colorScheme="purple"
               onClick={() => window.open(resumeLink, "_blank")}
             >
               Click Here
