@@ -39,11 +39,11 @@ const theme = extendTheme({
 const colors = [
   "red.500",
   "cyan.300",
-  "green.300",
-  "purple.400",
+  "green.400",
   "orange.300",
+  "pink.300",
+  "teal.200",
   "pink.500",
-  "teal.300",
   "yellow.300",
 ];
 
@@ -73,9 +73,9 @@ function App() {
   const squareTexts = [
     "Financial Dashboard",
     "Image Text Translator",
-    "Animation",
+    "✢",
     "About",
-    "Animation",
+    "✢",
     "Coming soon",
     "Coming Soon",
     "Contact",
@@ -148,14 +148,14 @@ function App() {
           const colorIndex = colorChangeSquares.indexOf(index);
           const hoverColor = shouldChangeColor
             ? shuffledColors[colorIndex]
-            : "blue.400";
+            : "purple.500";
 
           return (
             <Box
               key={index}
               w="200px"
               h="200px"
-              bg="blue.400"
+              bg="purple.500"
               _hover={{ cursor: "pointer", ...animationStyle, bg: hoverColor }}
               onClick={() => handleSquareClick(index)}
               display="flex"

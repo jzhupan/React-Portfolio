@@ -2,13 +2,15 @@ import {
   Box,
   Heading,
   Text,
-  Link,
+  // Link,
+  Image,
   Button,
   Stack,
-  HStack,
-  Icon,
+  Center,
+  // HStack,
+  // Icon,
 } from "@chakra-ui/react";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+// import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const About = () => {
   const resumeLink =
@@ -19,7 +21,7 @@ const About = () => {
       <Stack spacing="4" width="full" mx="auto">
         <Box mx="auto" width="100%">
           <Heading
-            size="xs"
+            size="mb"
             textTransform="uppercase"
             textAlign={"center"}
             m={"5px"}
@@ -27,7 +29,7 @@ const About = () => {
             Early Career Summary:
           </Heading>
           <Box mx={"auto"} maxW={"80%"}>
-            <Text pt="2" textAlign={"justify"}>
+            <Text pt="2" textAlign={"justify"} mb={2}>
               After several years in{" "}
               <strong>freelance illustration and graphic design</strong>, I made
               a decisive transition into the realm of programming, with a focus
@@ -49,14 +51,14 @@ const About = () => {
               a developer.
             </Text>
             <Heading
-              size="xs"
+              size="mb"
               textTransform="uppercase"
               textAlign={"center"}
               m={"5px"}
             >
               Career Goal:
             </Heading>
-            <Text pt="2" textAlign={"justify"}>
+            <Text pt="2" textAlign={"justify"} mb={2}>
               As an enthusiastic, self-taught{" "}
               <strong>Front-End Developer, Designer, and Illustrator,</strong> I
               offer a unique fusion of creative talent and technical acumen,
@@ -76,25 +78,24 @@ const About = () => {
 
         <Box mx="auto" textAlign="center" boxSize={"20%"} mb={2}>
           <Box p={5} shadow="md" borderWidth="1px" borderRadius="md">
-            <Heading mb={4} textAlign="center" size="md">
-              Connect with Me
+            <Heading mb={4} textAlign="center" size="sm">
+              View My Resume
             </Heading>
-            <HStack spacing={4} justifyContent="center" w={"100%"}>
-              <Link href="https://www.linkedin.com/in/jenniezp/" isExternal>
-                <Icon as={FaLinkedin} w={6} h={6} />
-              </Link>
-              <Link href="https://github.com/jzhupan" isExternal>
-                <Icon as={FaGithub} w={6} h={6} />
-              </Link>
-              <Button
-                colorScheme="pink"
-                onClick={() => window.open(resumeLink, "_blank")}
-              >
-                View Resume
-              </Button>
-            </HStack>
+
+            <Button
+              colorScheme="pink"
+              onClick={() => window.open(resumeLink, "_blank")}
+            >
+              Click Here
+            </Button>
           </Box>
         </Box>
+        <Center p={1} mt={4}>
+          <Image
+            boxSize={"20%"}
+            src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTJ6dzMyNmt0aTczeXZvOGF3dTJqbmwybzB6ODM3YzZ3YmhyMHRjZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vpAekUNSgb0k0/giphy.gif"
+          />
+        </Center>
       </Stack>
     </div>
   );
