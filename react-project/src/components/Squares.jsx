@@ -17,6 +17,7 @@ import Project1 from "./Project1";
 import Project2 from "./Project2";
 import ContactForm from "./ContactForm";
 import About from "./About";
+import AnimatedBox from "./AnimatedBox";
 
 const theme = extendTheme({
   styles: {
@@ -75,7 +76,7 @@ function App() {
     "Image Text Translator",
     "✢",
     "About",
-    "✢",
+    <AnimatedBox key="animation" />,
     "Coming soon",
     "Coming Soon",
     "Contact",
@@ -86,7 +87,7 @@ function App() {
     <Project2 key="project2" />,
     "Animation/GIF placeholder",
     <About key="about" />,
-    "Animation/GIF placeholder",
+    "animation",
     "Coming soon",
     "Coming Soon",
     <ContactForm key="contact-page" />,
@@ -120,7 +121,7 @@ function App() {
     event.target.classList.remove("animate"); // Remove the animation class after it ends
   };
 
-  const animatedSquares = [2, 4, 5, 6];
+  const animatedSquares = [2, 5, 6];
   const colorChangeSquares = [0, 1, 2, 3, 4, 5, 6, 7];
   const shuffledAnimations = shuffleArray([...animations]);
   const shuffledColors = shuffleArray([...colors]);
@@ -150,13 +151,25 @@ function App() {
             ? shuffledColors[colorIndex]
             : "purple.500";
 
+          let extraHoverStyle =
+            index === 4
+              ? {
+                  transform: "scale(1.05)",
+                }
+              : {};
+
           return (
             <Box
               key={index}
               w="200px"
               h="200px"
               bg="purple.500"
-              _hover={{ cursor: "pointer", ...animationStyle, bg: hoverColor }}
+              _hover={{
+                cursor: "pointer",
+                ...animationStyle,
+                bg: hoverColor,
+                ...extraHoverStyle,
+              }}
               onClick={() => handleSquareClick(index)}
               display="flex"
               flexDirection="column"
@@ -164,14 +177,18 @@ function App() {
               alignItems="center"
               onAnimationEnd={handleAnimationEnd}
             >
-              <Text
-                fontSize="lg"
-                fontWeight="bold"
-                color="white"
-                textAlign="center"
-              >
-                {squareTexts[index]}
-              </Text>
+              {index === 4 ? (
+                <AnimatedBox />
+              ) : (
+                <Text
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="white"
+                  textAlign="center"
+                >
+                  {squareTexts[index]}
+                </Text>
+              )}
             </Box>
           );
         })}

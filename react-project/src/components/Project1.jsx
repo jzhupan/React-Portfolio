@@ -19,8 +19,8 @@ import reactLogo from "../assets/tech-icons/React.png";
 import nextLogo from "../assets/tech-icons/Next.js.png";
 import axiosLogo from "../assets/tech-icons/Axios.png";
 import chakraUILogo from "../assets/tech-icons/chakraui.png";
-import projectHome from "../assets/project-img/homeSS.png";
-import projectStockSearch from "../assets/project-img/StockSearchSS.png";
+import projectHome from "../assets/project-img/homeSS.webp";
+import projectStockSearch from "../assets/project-img/StockSearchSS.webp";
 
 const slideIn = keyframes`
   from { transform: translateX(-20px); opacity: 0; }
