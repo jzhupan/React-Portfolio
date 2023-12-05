@@ -18,6 +18,7 @@ import Project2 from "./Project2";
 import ContactForm from "./ContactForm";
 import About from "./About";
 import AnimatedBox from "./AnimatedBox";
+import CatAnimation from "./CatAnimation";
 
 const theme = extendTheme({
   styles: {
@@ -74,11 +75,11 @@ function App() {
   const squareTexts = [
     "Financial Dashboard",
     "Image Text Translator",
-    "✢",
+    <CatAnimation key="cat-animation" />,
     "About",
     <AnimatedBox key="animation" />,
     "Coming soon",
-    "Coming Soon",
+    "✢",
     "Contact",
   ];
 
@@ -121,7 +122,7 @@ function App() {
     event.target.classList.remove("animate"); // Remove the animation class after it ends
   };
 
-  const animatedSquares = [2, 5, 6];
+  const animatedSquares = [5, 6];
   const colorChangeSquares = [0, 1, 2, 3, 4, 5, 6, 7];
   const shuffledAnimations = shuffleArray([...animations]);
   const shuffledColors = shuffleArray([...colors]);
@@ -152,7 +153,7 @@ function App() {
             : "purple.500";
 
           let extraHoverStyle =
-            index === 4
+            index === 4 || index === 2
               ? {
                   transform: "scale(1.05)",
                 }
@@ -179,6 +180,8 @@ function App() {
             >
               {index === 4 ? (
                 <AnimatedBox />
+              ) : index === 2 ? (
+                <CatAnimation />
               ) : (
                 <Text
                   fontSize="lg"

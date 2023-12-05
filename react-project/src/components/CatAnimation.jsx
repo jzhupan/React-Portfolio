@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Box, Image } from "@chakra-ui/react";
-import staticImage from "../assets/cat-animation/Box-no-eyes.webp";
-import animatedGif from "../assets/cat-animation/Animated box.gif";
+import staticCatBody from "../assets/cat-animation/Cat-tail-static.webp";
+import tailSrc from "../assets/cat-animation/Cat-tail-animated.gif";
 
-const AnimatedBox = () => {
+const CatAnimation = () => {
   const [hover, setHover] = useState(false);
 
   return (
@@ -15,8 +15,8 @@ const AnimatedBox = () => {
       height="200px"
     >
       <Image
-        src={staticImage}
-        alt="Static"
+        src={staticCatBody}
+        alt="Cat Body"
         style={{
           display: hover ? "none" : "block",
           width: "100%",
@@ -24,8 +24,8 @@ const AnimatedBox = () => {
         }}
       />
       <Image
-        src={animatedGif}
-        alt="Animated"
+        src={tailSrc}
+        alt="Cat Tail"
         style={{
           display: hover ? "block" : "none",
           width: "100%",
@@ -39,4 +39,4 @@ const AnimatedBox = () => {
   );
 };
 
-export default AnimatedBox;
+export default CatAnimation;
