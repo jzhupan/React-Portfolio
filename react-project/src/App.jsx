@@ -1,7 +1,7 @@
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import "./App.css";
-import Squares from "./Components/Squares";
 import Footer from "./Components/Footer";
+import Tiles from "./Components/Tiles";
 
 const colors = {
   brand: {
@@ -49,7 +49,7 @@ const theme = extendTheme({
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Squares />
+      <Tiles />
       <Footer />
     </ChakraProvider>
   );

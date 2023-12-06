@@ -3,12 +3,6 @@ import {
   Box,
   Grid,
   extendTheme,
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalHeader,
-  ModalOverlay,
   Text,
   CSSReset,
 } from "@chakra-ui/react";
@@ -19,6 +13,7 @@ import ContactForm from "./ContactForm";
 import About from "./About";
 import AnimatedBox from "./AnimatedBox";
 import CatAnimation from "./CatAnimation";
+import CustomModal from "./CustomModal";
 
 const theme = extendTheme({
   styles: {
@@ -68,27 +63,27 @@ function shuffleArray(array) {
   return array;
 }
 
-function App() {
+function Tiles() {
   const [selectedSquare, setSelectedSquare] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const squareTexts = [
     "Financial Dashboard",
     "Image Text Translator",
-    <CatAnimation key="cat-animation" />,
+    "",
     "About",
-    <AnimatedBox key="animation" />,
-    "Coming soon",
+    "",
     "✢",
+    "Coming soon",
     "Contact",
   ];
 
   const modalContents = [
     <Project1 key="project1" />,
     <Project2 key="project2" />,
-    "Animation/GIF placeholder",
+    "",
     <About key="about" />,
-    "animation",
+    "",
     "Coming soon",
     "Coming Soon",
     <ContactForm key="contact-page" />,
@@ -96,7 +91,7 @@ function App() {
 
   const modalHeaders = [
     "Financial Pulse Dashboard",
-    "Image to Text Translator App",
+    "Image to Text Translator Tiles",
     "Animation placeholder",
     "Art Meets Code: Jennie's Creative Coding Odyssey",
     "Animation placeholder",
@@ -116,10 +111,6 @@ function App() {
   const handleCloseModal = () => {
     setSelectedSquare(null);
     setIsModalOpen(false);
-  };
-
-  const handleAnimationEnd = (event) => {
-    event.target.classList.remove("animate"); // Remove the animation class after it ends
   };
 
   const animatedSquares = [5, 6];
@@ -176,7 +167,6 @@ function App() {
               flexDirection="column"
               justifyContent="center"
               alignItems="center"
-              onAnimationEnd={handleAnimationEnd}
             >
               {index === 4 ? (
                 <AnimatedBox />
@@ -196,32 +186,14 @@ function App() {
           );
         })}
       </Grid>
-      <Modal
+      <CustomModal
         isOpen={isModalOpen}
         onClose={handleCloseModal}
-        size="xl"
-        isCentered
-      >
-        <ModalOverlay />
-        <ModalContent height="95%" maxW="80%" margin={1} overflowY={"auto"}>
-          <ModalHeader
-            size="lg"
-            fontSize={24}
-            fontWeight="bold"
-            marginTop={3}
-            paddingBottom={-5}
-            textAlign="center"
-          >
-            {modalHeaders[selectedSquare]}
-          </ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            <Text>{modalContents[selectedSquare]}</Text>
-          </ModalBody>
-        </ModalContent>
-      </Modal>
+        modalContent={modalContents[selectedSquare]}
+        modalHeader={modalHeaders[selectedSquare]}
+      />
     </ChakraProvider>
   );
 }
 
-export default App;
+export default Tiles;
