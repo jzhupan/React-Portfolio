@@ -7,7 +7,7 @@ import {
   Icon,
   HStack,
 } from "@chakra-ui/react";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaPaintBrush } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -26,6 +26,9 @@ const Footer = () => {
           </Link>
           <Link href="https://github.com/jzhupan" isExternal>
             <Icon as={FaGithub} w={6} h={6} />
+          </Link>
+          <Link href="https://www.jenniezp.art/" isExternal>
+            <Icon as={FaPaintBrush} w={6} h={6} />
           </Link>
         </HStack>
       </Container>

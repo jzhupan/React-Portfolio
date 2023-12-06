@@ -3,12 +3,6 @@ import {
   Box,
   Grid,
   extendTheme,
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalHeader,
-  ModalOverlay,
   Text,
   CSSReset,
 } from "@chakra-ui/react";
@@ -17,6 +11,9 @@ import Project1 from "./Project1";
 import Project2 from "./Project2";
 import ContactForm from "./ContactForm";
 import About from "./About";
+import AnimatedBox from "./AnimatedBox";
+import CatAnimation from "./CatAnimation";
+import CustomModal from "./CustomModal";
 
 const theme = extendTheme({
   styles: {
@@ -66,27 +63,27 @@ function shuffleArray(array) {
   return array;
 }
 
-function App() {
+function Tiles() {
   const [selectedSquare, setSelectedSquare] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const squareTexts = [
     "Financial Dashboard",
     "Image Text Translator",
-    "✢",
+    "",
     "About",
+    "",
     "✢",
     "Coming soon",
-    "Coming Soon",
     "Contact",
   ];
 
   const modalContents = [
     <Project1 key="project1" />,
     <Project2 key="project2" />,
-    "Animation/GIF placeholder",
+    "",
     <About key="about" />,
-    "Animation/GIF placeholder",
+    "",
     "Coming soon",
     "Coming Soon",
     <ContactForm key="contact-page" />,
@@ -94,7 +91,7 @@ function App() {
 
   const modalHeaders = [
     "Financial Pulse Dashboard",
-    "Image to Text Translator App",
+    "Image to Text Translator Tiles",
     "Animation placeholder",
     "Art Meets Code: Jennie's Creative Coding Odyssey",
     "Animation placeholder",
@@ -116,11 +113,7 @@ function App() {
     setIsModalOpen(false);
   };
 
-  const handleAnimationEnd = (event) => {
-    event.target.classList.remove("animate"); // Remove the animation class after it ends
-  };
-
-  const animatedSquares = [2, 4, 5, 6];
+  const animatedSquares = [5, 6];
   const colorChangeSquares = [0, 1, 2, 3, 4, 5, 6, 7];
   const shuffledAnimations = shuffleArray([...animations]);
   const shuffledColors = shuffleArray([...colors]);
@@ -150,58 +143,57 @@ function App() {
             ? shuffledColors[colorIndex]
             : "purple.500";
 
+          let extraHoverStyle =
+            index === 4 || index === 2
+              ? {
+                  transform: "scale(1.05)",
+                }
+              : {};
+
           return (
             <Box
               key={index}
               w="200px"
               h="200px"
               bg="purple.500"
-              _hover={{ cursor: "pointer", ...animationStyle, bg: hoverColor }}
+              _hover={{
+                cursor: "pointer",
+                ...animationStyle,
+                bg: hoverColor,
+                ...extraHoverStyle,
+              }}
               onClick={() => handleSquareClick(index)}
               display="flex"
               flexDirection="column"
               justifyContent="center"
               alignItems="center"
-              onAnimationEnd={handleAnimationEnd}
             >
-              <Text
-                fontSize="lg"
-                fontWeight="bold"
-                color="white"
-                textAlign="center"
-              >
-                {squareTexts[index]}
-              </Text>
+              {index === 4 ? (
+                <AnimatedBox />
+              ) : index === 2 ? (
+                <CatAnimation />
+              ) : (
+                <Text
+                  fontSize="lg"
+                  fontWeight="bold"
+                  color="white"
+                  textAlign="center"
+                >
+                  {squareTexts[index]}
+                </Text>
+              )}
             </Box>
           );
         })}
       </Grid>
-      <Modal
+      <CustomModal
         isOpen={isModalOpen}
         onClose={handleCloseModal}
-        size="xl"
-        isCentered
-      >
-        <ModalOverlay />
-        <ModalContent height="95%" maxW="80%" margin={1} overflowY={"auto"}>
-          <ModalHeader
-            size="lg"
-            fontSize={24}
-            fontWeight="bold"
-            marginTop={3}
-            paddingBottom={-5}
-            textAlign="center"
-          >
-            {modalHeaders[selectedSquare]}
-          </ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>
-            <Text>{modalContents[selectedSquare]}</Text>
-          </ModalBody>
-        </ModalContent>
-      </Modal>
+        modalContent={modalContents[selectedSquare]}
+        modalHeader={modalHeaders[selectedSquare]}
+      />
     </ChakraProvider>
   );
 }
 
-export default App;
+export default Tiles;
