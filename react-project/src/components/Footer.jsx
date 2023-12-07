@@ -22,13 +22,13 @@ const Footer = () => {
       >
         <HStack spacing={4} justifyContent="center" w={"100%"}>
           <Link href="https://www.linkedin.com/in/jenniezp/" isExternal>
-            <Icon as={FaLinkedin} w={6} h={6} />
+            <Icon as={FaLinkedin} w={6} h={6} className="icons" />
           </Link>
           <Link href="https://github.com/jzhupan" isExternal>
-            <Icon as={FaGithub} w={6} h={6} />
+            <Icon as={FaGithub} w={6} h={6} className="icons" />
           </Link>
           <Link href="https://www.jenniezp.art/" isExternal>
-            <Icon as={FaPaintBrush} w={6} h={6} />
+            <Icon as={FaPaintBrush} w={6} h={6} className="icons" />
           </Link>
         </HStack>
       </Container>

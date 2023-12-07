@@ -36,16 +36,6 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-/* App.css */
-
 @keyframes shrink-halfway {
   0% {
     transform: scaleY(1);
@@ -161,4 +151,30 @@
   75% {
     transform: scale(1.15, 0.85); /* Stretch horizontally, squash vertically */
   }
+}
+
+.logo {
+  color: white;
+  text-align: left;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 90%;
+  margin-bottom: -16%;
+  margin-left: -120%;
+  transition: all 0.3s ease;
+  text-shadow: 3px 3px 0px rgba(114, 53, 255, 0.637);
+}
+
+.logo:hover {
+  color: #b514ff;
+  text-shadow: 0 0 15px #b514ff, 0 0 30px #b514ff;
+}
+
+.icons {
+  transition: transform 0.3s ease;
+}
+
+.icons:hover {
+  transform: scale(1.2);
 }
