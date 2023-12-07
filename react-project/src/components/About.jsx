@@ -15,7 +15,7 @@ import {
 
 const About = () => {
   const resumeLink =
-    "https://drive.google.com/file/d/1XHntpzmtXEWaOoaQ0G2fdzZe5QmJFea0/preview";
+    "https://drive.google.com/file/d/1zFKuYJQuNljDPSGtI8TLK5X5ZJzTo9PR/preview";
   const borderColor = useColorModeValue("purple.500", "pink.300");
   return (
     <div>
