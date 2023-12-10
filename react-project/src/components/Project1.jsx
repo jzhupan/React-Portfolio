@@ -6,50 +6,23 @@ import {
   Image,
   useColorModeValue,
   Stack,
-  Button,
-  Link,
   keyframes,
   UnorderedList,
   ListItem,
 } from "@chakra-ui/react";
 import { css } from "@emotion/react";
-import { useState } from "react";
-
+import VideoPlayer2 from "./VideoPlayer2";
 import reactLogo from "../assets/tech-icons/React.png";
 import nextLogo from "../assets/tech-icons/Next.js.png";
 import axiosLogo from "../assets/tech-icons/Axios.png";
 import chakraUILogo from "../assets/tech-icons/chakraui.png";
-import projectHome from "../assets/project-img/homeSS.webp";
-import projectStockSearch from "../assets/project-img/StockSearchSS.webp";
 
 const slideIn = keyframes`
   from { transform: translateX(-20px); opacity: 0; }
   to { transform: translateX(0); opacity: 1; }
 `;
 
-const Project1 = () => {
-  const images = [
-    {
-      src: projectHome,
-      alt: "Screenshot of financial pulse dashboard's Homepage",
-    },
-    {
-      src: projectStockSearch,
-      alt: "Screenshot of a Searchable stock after using the search bar",
-    },
-  ];
-
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
-  const prevImage = () => {
-    setCurrentImageIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
-    );
-  };
+const Project2 = () => {
   const borderColor = useColorModeValue("purple.500", "pink.300");
 
   return (
@@ -165,27 +138,13 @@ const Project1 = () => {
             />
           </Flex>
         </Box>
-        {/* Image Section */}
-        <Box mx="auto" textAlign="center" boxSize={"100%"} mb={1}>
-          <Link href={images[currentImageIndex].src} isExternal>
-            <Image
-              src={images[currentImageIndex].src}
-              alt={images[currentImageIndex].alt}
-              objectFit="contain"
-              mb={2}
-            />
-          </Link>
 
-          <Button mr={4} onClick={prevImage} bg={"purple.400"} color={"white"}>
-            Back
-          </Button>
-          <Button onClick={nextImage} bg={"purple.400"} color={"white"}>
-            Forward
-          </Button>
+        <Box mx="auto" textAlign="center">
+          <VideoPlayer2 />
         </Box>
       </Stack>
     </div>
   );
 };
 
-export default Project1;
+export default Project2;
