@@ -32,8 +32,8 @@ const Project3 = () => {
           <Box mx={"auto"} maxW={"80%"}>
             <Text pt="2" textAlign={"justify"}>
               I <strong>customized</strong> a theme called '
-              <strong>Midnight Grape</strong>' for Visual Studio Code, is a{" "}
-              <strong>visually stunning interface</strong> designed to enhance
+              <strong>Midnight Grape</strong>' for Visual Studio Code, which is
+              a <strong>visually stunning interface</strong> designed to enhance
               the developer's experience through its serene night sky-inspired
               color palette. It prioritizes{" "}
               <strong>comfort and readability,</strong> with shades of{" "}
