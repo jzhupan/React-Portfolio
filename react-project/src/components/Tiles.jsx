@@ -9,6 +9,7 @@ import {
 import { useState } from "react";
 import Project1 from "./Project1";
 import Project2 from "./Project2";
+import Project3 from "./Project3";
 import ContactForm from "./ContactForm";
 import About from "./About";
 import AnimatedBox from "./AnimatedBox";
@@ -74,7 +75,7 @@ function Tiles() {
     "About",
     "",
     "✢",
-    "Coming soon",
+    "VSCode Theme",
     "Contact",
   ];
 
@@ -85,7 +86,7 @@ function Tiles() {
     <About key="about" />,
     "",
     "Coming soon",
-    "Coming Soon",
+    <Project3 key="project3" />,
     <ContactForm key="contact-page" />,
   ];
 
@@ -96,11 +97,11 @@ function Tiles() {
     "Art Meets Code: Jennie's Creative Coding Odyssey",
     "Animation placeholder",
     "Coming Soon",
-    "Coming Soon",
+    "Visual Studio Code Theme",
     "Your Vision, Our Creativity: Contact Me to Begin!",
   ];
 
-  const modalEnabledSquares = [0, 1, 3, 7];
+  const modalEnabledSquares = [0, 1, 3, 6, 7];
   const handleSquareClick = (index) => {
     if (modalEnabledSquares.includes(index)) {
       setSelectedSquare(index);
