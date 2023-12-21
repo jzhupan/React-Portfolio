@@ -191,7 +191,6 @@ function Tiles() {
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         modalContent={modalContents[selectedSquare]}
-        modalHeader={modalHeaders[selectedSquare]}
       />
     </ChakraProvider>
   );
