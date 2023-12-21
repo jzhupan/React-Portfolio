@@ -61,8 +61,10 @@ const About = () => {
             </Heading>
             <Text pt="2" textAlign={"justify"} mb={2}>
               As an enthusiastic, self-taught{" "}
-              <strong>Front-End Developer, Designer, and Illustrator,</strong> I
-              offer a unique fusion of creative talent and technical acumen,
+              <strong>
+                Front-End Developer, Designer with a flair for Illustrator,
+              </strong>{" "}
+              I offer a unique fusion of creative talent and technical skills,
               cultivated through hands-on experience. My foray into technology
               is characterized by an unwavering dedication to mastering new
               skills and expanding my knowledge base. I am eager to collaborate
