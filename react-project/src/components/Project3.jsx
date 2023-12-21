@@ -6,11 +6,12 @@ import {
   Image,
   useColorModeValue,
   Stack,
-  keyframes,
   UnorderedList,
   ListItem,
 } from "@chakra-ui/react";
 import vscodeTheme from "../assets/project-img/midnight-grape.png";
+import mgLogo from "../assets/project-img/mg-theme-logo.webp";
+import VSIcon from "../assets/tech-icons/Visual-Studio.webp";
 
 const Project3 = () => {
   const borderColor = useColorModeValue("purple.500", "pink.300");
@@ -71,6 +72,9 @@ const Project3 = () => {
           </Box>
         </Box>
         <Box mx="auto">
+          <Image src={mgLogo} alt="midnight grape logo" className="logo-icon" />
+        </Box>
+        <Box mx="auto">
           <Heading size="xs" textTransform="uppercase" m={1} align="center">
             Install Extension Here:
           </Heading>
@@ -92,8 +96,22 @@ const Project3 = () => {
               href="https://marketplace.visualstudio.com/items?itemName=jenniezp.midnight-grape-theme"
               target="_blank"
               rel="noreferrer"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                textDecoration: "none",
+                color: "inherit",
+              }}
             >
-              Visual Studio Marketplace
+              <Image
+                src={VSIcon}
+                alt="visual studio code logo"
+                style={{
+                  marginRight: "8px",
+                  width: "25px",
+                }}
+              />
+              Marketplace
             </a>
           </Flex>
         </Box>
