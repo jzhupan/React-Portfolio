@@ -72,7 +72,7 @@ const Project3 = () => {
         </Box>
         <Box mx="auto">
           <Heading size="xs" textTransform="uppercase" m={1} align="center">
-            Link:
+            Install Extension Here:
           </Heading>
           <Flex
             width="full"
@@ -89,11 +89,11 @@ const Project3 = () => {
             align="center"
           >
             <a
-              href="https://github.com/jzhupan/vscode-theme.git"
+              href="https://marketplace.visualstudio.com/items?itemName=jenniezp.midnight-grape-theme"
               target="_blank"
               rel="noreferrer"
             >
-              Github Repository
+              Visual Studio Marketplace
             </a>
           </Flex>
         </Box>
