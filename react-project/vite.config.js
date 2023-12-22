@@ -4,5 +4,5 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  publicDir: "/react-project/dist/robots.txt",
+  publicDir: "/react-project/public/robots.txt",
 });
