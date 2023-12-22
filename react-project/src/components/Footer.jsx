@@ -23,21 +23,21 @@ const Footer = () => {
         <HStack spacing={4} justifyContent="center" w={"100%"}>
           <Link
             href="https://www.linkedin.com/in/jenniezp/"
-            alt="linkedin profile url"
+            aria-label="View Jennie's LinkedIn profile"
             isExternal
           >
             <Icon as={FaLinkedin} w={6} h={6} className="icons" />
           </Link>
           <Link
             href="https://github.com/jzhupan"
-            alt="github profile url"
+            aria-label="View Jennie's GitHub profile"
             isExternal
           >
             <Icon as={FaGithub} w={6} h={6} className="icons" />
           </Link>
           <Link
             href="https://www.jenniezp.art/"
-            alt="art portfolio url"
+            aria-label="View Jennie's art portfolio"
             isExternal
           >
             <Icon as={FaPaintBrush} w={6} h={6} className="icons" />
