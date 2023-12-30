@@ -3,6 +3,7 @@ import "./App.css";
 import Footer from "./Components/Footer";
 import Tiles from "./Components/Tiles";
 import Logo from "./Components/Logo";
+import ModalComponents from "./Components/ModalComponents";
 
 const colors = {
   brand: {
@@ -53,7 +54,8 @@ function App() {
       <Box display="flex" justifyContent="center" alignItems="center">
         <Logo />
       </Box>
-      <Tiles />
+      {/* <Tiles /> */}
+      <ModalComponents />
       <Footer />
     </ChakraProvider>
   );

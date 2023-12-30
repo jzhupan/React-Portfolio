@@ -115,7 +115,7 @@ function Tiles() {
   };
 
   const animatedSquares = [0, 1, 3, 5, 6, 7];
-  const colorChangeSquares = [0, 1, 2, 3, 4, 5, 6, 7];
+  const colorChangeSquares = [0, 1, 3, 6, 7];
   const shuffledAnimations = shuffleArray([...animations]);
   const shuffledColors = shuffleArray([...colors]);
 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Box, Image } from "@chakra-ui/react";
 import staticCatBody from "../assets/cat-animation/Cat-tail-static.webp";
-import tailSrc from "../assets/cat-animation/Cat-tail-animated.gif";
+import tailSrc from "../assets/cat-animation/Cat-tail-animation.gif";
 
 const CatAnimation = () => {
   const [hover, setHover] = useState(false);
@@ -11,8 +11,7 @@ const CatAnimation = () => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       position="relative"
-      width="200px"
-      height="200px"
+      width="180px"
     >
       <Image
         src={staticCatBody}
