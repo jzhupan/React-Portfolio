@@ -11,7 +11,8 @@ const CatAnimation = () => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       position="relative"
-      width="180px"
+      width="100%"
+      height="auto"
     >
       <Image
         src={staticCatBody}
@@ -29,9 +30,6 @@ const CatAnimation = () => {
           display: hover ? "block" : "none",
           width: "100%",
           height: "auto",
-          position: "absolute",
-          top: 0,
-          left: 0,
         }}
       />
     </Box>

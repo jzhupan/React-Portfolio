@@ -21,12 +21,7 @@ const About = () => {
     <div>
       <Stack spacing="4" width="full" mx="auto">
         <Box mx="auto" width="100%">
-          <Heading
-            size="mb"
-            textTransform="uppercase"
-            textAlign={"center"}
-            m={"5px"}
-          >
+          <Heading size="mb" textTransform="uppercase" textAlign={"center"}>
             Early Career Summary:
           </Heading>
           <Box mx={"auto"} maxW={"80%"}>
@@ -36,7 +31,7 @@ const About = () => {
               a decisive transition into the realm of programming, with a focus
               on <strong>front-end development</strong>. While I anticipated a
               smooth transition, the journey proved to be both challenging and
-              invigorating, pushing me out of my comfort zone and onto a path of
+              invigorating, pushing me out of my comfort zone and onto a path of{" "}
               <strong>continuous growth and learning</strong>. In my commitment
               to this new career path, I have adopted a disciplined routine of
               daily <strong>GitHub commits</strong>. This practice goes beyond
@@ -88,14 +83,14 @@ const About = () => {
             borderColor={borderColor}
           >
             <Heading mb={4} textAlign="center" size="sm">
-              View My Resume
+              Resume Lost? Worry not!
             </Heading>
 
             <Button
               colorScheme="purple"
               onClick={() => window.open(resumeLink, "_blank")}
             >
-              Click Here
+              Resume
             </Button>
           </Box>
         </Box>

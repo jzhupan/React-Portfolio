@@ -1,9 +1,9 @@
 import { ChakraProvider, extendTheme, Box } from "@chakra-ui/react";
 import "./App.css";
 import Footer from "./Components/Footer";
-import Tiles from "./Components/Tiles";
+
 import Logo from "./Components/Logo";
-import ModalComponents from "./Components/ModalComponents";
+import GridLayout from "./Components/GridLayout";
 
 const colors = {
   brand: {
@@ -55,7 +55,7 @@ function App() {
         <Logo />
       </Box>
       {/* <Tiles /> */}
-      <ModalComponents />
+      <GridLayout />
       <Footer />
     </ChakraProvider>
   );

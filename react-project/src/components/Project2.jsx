@@ -11,11 +11,11 @@ import {
   ListItem,
 } from "@chakra-ui/react";
 import { css } from "@emotion/react";
-import VideoPlayer from "./VideoPlayer";
-import expressLogo from "../assets/tech-icons/Express.png";
-import bootstrapLogo from "../assets/tech-icons/Bootstrap.png";
+import VideoPlayer2 from "./VideoPlayer2";
+import reactLogo from "../assets/tech-icons/React.png";
+import nextjsLogo from "../assets/tech-icons/Next.js.png";
 import axiosLogo from "../assets/tech-icons/Axios.png";
-import jsLogo from "../assets/tech-icons/JavaScript.png";
+import chakraUILogo from "../assets/tech-icons/chakraui.png";
 
 const slideIn = keyframes`
   from { transform: translateX(-20px); opacity: 0; }
@@ -28,60 +28,15 @@ const Project2 = () => {
   return (
     <div>
       <Stack spacing="4" width="full" mx="auto">
-        <Box mx="auto" width="100%">
-          <Heading
-            s
-            size="xs"
-            textTransform="uppercase"
-            textAlign={"center"}
-            mt={"15px"}
-          >
-            Summary:
-          </Heading>
-
-          <Box mx={"auto"} maxW={"80%"}>
-            <Text pt="2" textAlign={"justify"}>
-              I developed an innovative{" "}
-              <strong>Optical Character Recognition (OCR) application</strong>{" "}
-              that seamlessly transforms images into editable text and offers
-              translation capabilities. This <strong>user-centric</strong>{" "}
-              platform enables users to effortlessly upload images with text,
-              precisely crop the text areas, and translate the content into
-              English. Key highlights of the project include:
-              <UnorderedList>
-                <ListItem>
-                  <strong>User-Friendly Interface:</strong> Designed with a
-                  focus on simplicity and efficiency, the app provides an
-                  intuitive experience, allowing users to navigate and perform
-                  tasks with ease.
-                </ListItem>
-                <ListItem>
-                  <strong>Cost-Effective Development:</strong> I strategically
-                  leveraged free resources during the development process, which
-                  not only optimized costs but also made the application more
-                  accessible to a broader audience.
-                </ListItem>
-                <ListItem>
-                  Robust Back-End System: The app features a sophisticated
-                  back-end infrastructure that securely stores uploaded images
-                  locally. This system is designed to support{" "}
-                  <strong>multilingual functionality</strong>, catering to a
-                  diverse user base.
-                </ListItem>
-                <ListItem>
-                  <strong>Comprehensive Language Support:</strong> For an
-                  extensive overview and demonstration of the various languages
-                  supported by the app, I encourage you to refer to the{" "}
-                  <strong>ReadMe</strong> file included with the application.
-                </ListItem>
-              </UnorderedList>
-            </Text>
-          </Box>
+        <Box mx="auto" textAlign="center">
+          <VideoPlayer2 />
         </Box>
+
         <Box mx="auto">
           <Heading size="xs" textTransform="uppercase" m={1}>
             Notable Libraries / Frameworks used:
           </Heading>
+
           <Flex
             width="full"
             maxW="md"
@@ -97,7 +52,7 @@ const Project2 = () => {
             align="center"
           >
             <Image
-              src={expressLogo}
+              src={reactLogo}
               boxSize="50px"
               alt="React"
               transition="2s ease-in-out"
@@ -109,7 +64,7 @@ const Project2 = () => {
               `}
             />
             <Image
-              src={bootstrapLogo}
+              src={nextjsLogo}
               boxSize="50px"
               alt="Next.js"
               transition="2s ease-in-out"
@@ -133,7 +88,7 @@ const Project2 = () => {
               `}
             />
             <Image
-              src={jsLogo}
+              src={chakraUILogo}
               boxSize="50px"
               alt="Chakra UI"
               transition="2s ease-in-out"
@@ -147,8 +102,46 @@ const Project2 = () => {
           </Flex>
         </Box>
 
-        <Box mx="auto" textAlign="center">
-          <VideoPlayer />
+        <Box mx="auto" width="100%">
+          <Heading
+            size="xs"
+            textTransform="uppercase"
+            textAlign={"center"}
+            mt={"15px"}
+          >
+            Summary:
+          </Heading>
+          <Box mx={"auto"} maxW={"80%"}>
+            <Text pt="2" textAlign={"justify"}>
+              Developed a user-centric <strong>Home page</strong> and a dynamic
+              router page for efficient display of stocks and financial data,
+              sourced from <strong>Financial Modeling Prep's API</strong>.
+              Engineered a feature-rich interface, including:
+              <UnorderedList>
+                <ListItem>
+                  A comprehensive <strong>navigation bar</strong> for easy
+                  access to various sections.
+                </ListItem>
+                <ListItem>
+                  An intuitive <strong>search bar</strong> to quickly find
+                  specific stocks or financial data.
+                </ListItem>
+                <ListItem>
+                  A visually engaging <strong>marquee</strong> to highlight
+                  important financial news or trends.
+                </ListItem>
+                <ListItem>
+                  A dedicated <strong>news section</strong> to keep users
+                  updated with the latest financial news.
+                </ListItem>
+                <ListItem>
+                  A sidebar displaying <strong>real-time stock data</strong>,
+                  such as current prices and percentage changes, for at-a-glance
+                  market insights.
+                </ListItem>
+              </UnorderedList>
+            </Text>
+          </Box>
         </Box>
       </Stack>
     </div>

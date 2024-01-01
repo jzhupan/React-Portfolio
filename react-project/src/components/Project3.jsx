@@ -19,14 +19,58 @@ const Project3 = () => {
   return (
     <div>
       <Stack spacing="4" width="full" mx="auto">
-        <Box mx="auto" width="100%">
-          <Heading
-            s
-            size="xs"
-            textTransform="uppercase"
-            textAlign={"center"}
-            mt={"15px"}
+        <Box mx="auto">
+          <Image src={mgLogo} alt="midnight grape logo" className="logo-icon" />
+        </Box>{" "}
+        <Box mx="auto" textAlign="center">
+          <Image
+            src={vscodeTheme}
+            alt="screenshot demo of my visual studio code theme"
+          />
+        </Box>
+        <Box mx="auto">
+          <Heading size="xs" textTransform="uppercase" m={1} align="center">
+            Install Extension Here:
+          </Heading>
+          <Flex
+            width="full"
+            maxW="md"
+            mx="auto"
+            px="4"
+            py="2"
+            borderWidth="1px"
+            borderRadius="lg"
+            overflow="hidden"
+            borderColor={borderColor}
+            boxShadow="lg"
+            justify="space-around"
+            align="center"
           >
+            <a
+              href="https://marketplace.visualstudio.com/items?itemName=jenniezp.midnight-grape-theme"
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                display: "flex",
+                alignItems: "center",
+                textDecoration: "none",
+                color: "inherit",
+              }}
+            >
+              <Image
+                src={VSIcon}
+                alt="visual studio code logo"
+                style={{
+                  marginRight: "8px",
+                  width: "25px",
+                }}
+              />
+              Marketplace
+            </a>
+          </Flex>
+        </Box>
+        <Box mx="auto" width="100%">
+          <Heading s size="xs" textTransform="uppercase" textAlign={"center"}>
             Summary:
           </Heading>
 
@@ -70,57 +114,6 @@ const Project3 = () => {
               </UnorderedList>
             </Text>
           </Box>
-        </Box>
-        <Box mx="auto">
-          <Image src={mgLogo} alt="midnight grape logo" className="logo-icon" />
-        </Box>
-        <Box mx="auto">
-          <Heading size="xs" textTransform="uppercase" m={1} align="center">
-            Install Extension Here:
-          </Heading>
-          <Flex
-            width="full"
-            maxW="md"
-            mx="auto"
-            px="4"
-            py="2"
-            borderWidth="1px"
-            borderRadius="lg"
-            overflow="hidden"
-            borderColor={borderColor}
-            boxShadow="lg"
-            justify="space-around"
-            align="center"
-          >
-            <a
-              href="https://marketplace.visualstudio.com/items?itemName=jenniezp.midnight-grape-theme"
-              target="_blank"
-              rel="noreferrer"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                textDecoration: "none",
-                color: "inherit",
-              }}
-            >
-              <Image
-                src={VSIcon}
-                alt="visual studio code logo"
-                style={{
-                  marginRight: "8px",
-                  width: "25px",
-                }}
-              />
-              Marketplace
-            </a>
-          </Flex>
-        </Box>
-
-        <Box mx="auto" textAlign="center">
-          <Image
-            src={vscodeTheme}
-            alt="screenshot demo of my visual studio code theme"
-          />
         </Box>
       </Stack>
     </div>
