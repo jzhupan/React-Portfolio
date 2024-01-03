@@ -11,7 +11,7 @@ const CatAnimation = () => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       position="relative"
-      width="100%"
+      width="90%"
       height="auto"
     >
       <Image

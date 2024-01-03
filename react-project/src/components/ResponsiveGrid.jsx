@@ -5,6 +5,7 @@ import {
   extendTheme,
   CSSReset,
   Flex,
+  Box,
 } from "@chakra-ui/react";
 
 import AnimatedBox from "./AnimatedBox";
@@ -14,6 +15,7 @@ import FinancialPulseDashboard from "./FinancialPulseDashboard";
 import VSCodeTheme from "./VSCodeTheme";
 import AboutModal from "./AboutModal";
 import ContactModal from "./ContactModal";
+import Logo from "./Logo";
 
 const theme = extendTheme({
   styles: {
@@ -22,14 +24,19 @@ const theme = extendTheme({
         margin: 0,
         padding: 0,
         bg: "brand[grey]",
-        height: "100vh",
         display: "flex",
-        flexDirection: "column",
+
         justifyContent: "center",
         alignItems: "center",
         fontFamily: "Quicksand, sans-serif",
       },
     },
+  },
+  breakpoints: {
+    sm: "320px",
+    md: "500px",
+    lg: "960px",
+    xl: "1200px",
   },
 });
 
@@ -44,28 +51,30 @@ const colors = [
   "yellow.300",
 ];
 
-const animations = [
-  "shrink-halfway",
-  "grow",
-  "shake",
-  "rotate",
-  "flip",
-  "pulse",
-  "bounce",
-  "jelly",
-];
-
-const GridLayout = () => {
+const ResponsiveGrid = () => {
   return (
     <ChakraProvider theme={theme}>
       <CSSReset />
+      <Box display="flex" justifyContent="center" alignItems="center">
+        <Logo />
+      </Box>
       <Grid
         templateRows="repeat(4, 1fr)"
-        templateColumns="repeat(4, 200px)"
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          md: "repeat(4, 200px)",
+        }}
         gap={2}
       >
-        <GridItem rowSpan={2} colSpan={1} w="100%" h="200" bg="none">
-          <Flex justifyContent="center" alignItems="center" height="180px">
+        <GridItem
+          rowSpan={2}
+          colSpan={1}
+          w="100%"
+          h="100%"
+          bg="none"
+          className="hide-on-mobile"
+        >
+          <Flex justifyContent="center" alignItems="center" height="50%">
             <CatAnimation />
           </Flex>
         </GridItem>
@@ -79,8 +88,17 @@ const GridLayout = () => {
             <FinancialPulseDashboard />
           </Flex>
         </GridItem>
-        <GridItem rowSpan={2} colSpan={1} w="100%" h="200" bg="none">
-          <AnimatedBox />
+        <GridItem
+          rowSpan={2}
+          colSpan={1}
+          w="100%"
+          h="200"
+          bg="none"
+          className="hide-on-mobile"
+        >
+          <Flex justifyContent="center" alignItems="center" height="100%">
+            <AnimatedBox />
+          </Flex>
         </GridItem>
         <GridItem rowSpan={2} colSpan={1} w="100%" h="200" bg="purple.500">
           <Flex justifyContent="center" alignItems="center" height="180px">
@@ -94,6 +112,7 @@ const GridLayout = () => {
           h="200"
           bg="none"
           color="white"
+          className="hide-on-mobile"
         >
           <Flex justifyContent="center" alignItems="center" height="180px">
             ✢
@@ -114,4 +133,4 @@ const GridLayout = () => {
   );
 };
 
-export default GridLayout;
+export default ResponsiveGrid;

@@ -4,6 +4,7 @@ import Footer from "./Components/Footer";
 
 import Logo from "./Components/Logo";
 import GridLayout from "./Components/GridLayout";
+import ResponsiveGrid from "./Components/ResponsiveGrid";
 
 const colors = {
   brand: {
@@ -51,11 +52,12 @@ const theme = extendTheme({
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box display="flex" justifyContent="center" alignItems="center">
+      {/* <Box display="flex" justifyContent="center" alignItems="center">
         <Logo />
-      </Box>
+      </Box> */}
       {/* <Tiles /> */}
-      <GridLayout />
+      {/* <GridLayout /> */}
+      <ResponsiveGrid />
       <Footer />
     </ChakraProvider>
   );
