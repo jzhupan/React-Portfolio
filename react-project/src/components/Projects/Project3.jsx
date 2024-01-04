@@ -9,9 +9,9 @@ import {
   UnorderedList,
   ListItem,
 } from "@chakra-ui/react";
-import vscodeTheme from "../assets/project-img/midnight-grape.png";
-import mgLogo from "../assets/project-img/mg-theme-logo.webp";
-import VSIcon from "../assets/tech-icons/Visual-Studio.webp";
+import vscodeTheme from "/src/assets/project-img/midnight-grape.png";
+import mgLogo from "/src/assets/project-img/mg-theme-logo.webp";
+import VSIcon from "/src/assets/tech-icons/Visual-Studio.webp";
 
 const Project3 = () => {
   const borderColor = useColorModeValue("purple.500", "pink.300");

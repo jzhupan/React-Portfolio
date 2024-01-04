@@ -8,7 +8,7 @@ import {
   ModalCloseButton,
   useDisclosure,
 } from "@chakra-ui/react";
-import Project2 from "./Project2";
+import Project2 from "./Projects/Project2";
 
 const FinancialPulseDashboard = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -19,7 +19,7 @@ const FinancialPulseDashboard = () => {
         Financial Dashboard
       </Button>
       <Modal isOpen={isOpen} onClose={onClose} size="xl" isCentered="true">
-        <ModalOverlay />
+        <ModalOverlay backdropFilter="blur(10px) hue-rotate(80deg)" />
         <ModalContent width="95%">
           <ModalHeader size="xs" textTransform="uppercase" textAlign={"center"}>
             Financial Pulse Dashboard

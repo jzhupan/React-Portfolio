@@ -8,8 +8,8 @@ import {
   Box,
 } from "@chakra-ui/react";
 
-import AnimatedBox from "./AnimatedBox";
-import CatAnimation from "./CatAnimation";
+import AnimatedBox from "./Projects/AnimatedBox";
+import CatAnimation from "./Projects/CatAnimation";
 import ImageTextTranslatorApp from "./ImageTextTranslatorApp";
 import FinancialPulseDashboard from "./FinancialPulseDashboard";
 import VSCodeTheme from "./VSCodeTheme";
@@ -51,6 +51,12 @@ const colors = [
   "yellow.300",
 ];
 
+const ProjectOneTxt = "April 2023";
+const ProjectTwoTxt = "September 2023";
+const ProjectThreeTxt = "December 2023";
+const aboutTxt = "About me and my journey";
+const contactTxt = "Say Hi!";
+
 const ResponsiveGrid = () => {
   return (
     <ChakraProvider theme={theme}>
@@ -79,7 +85,12 @@ const ResponsiveGrid = () => {
           </Flex>
         </GridItem>
         <GridItem rowSpan={2} colSpan={1} w="100%" h="200" bg="purple.500">
-          <Flex justifyContent="center" alignItems="center" height="180px">
+          <Flex
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            height="180px"
+          >
             <ImageTextTranslatorApp />
           </Flex>
         </GridItem>

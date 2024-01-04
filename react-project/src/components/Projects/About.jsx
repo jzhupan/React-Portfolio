@@ -2,20 +2,16 @@ import {
   Box,
   Heading,
   Text,
-  // Link,
   Image,
   Button,
   Stack,
   Center,
   useColorModeValue,
-  // HStack,
-  // Icon,
 } from "@chakra-ui/react";
-// import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const About = () => {
   const resumeLink =
-    "https://drive.google.com/file/d/1dCprh7jT6iAyIpJK7ewpCDDyGQrzDDPt/preview";
+    "https://drive.google.com/file/d/1TOnA3dFVL7ypvpbeB_c1EwnREd0b3JYA/preview";
   const borderColor = useColorModeValue("purple.500", "pink.300");
   return (
     <div>
@@ -46,6 +42,28 @@ const About = () => {
               my technical abilities and reaffirming my passion for evolving as
               a developer.
             </Text>
+            <Box mx="auto" textAlign="center" boxSize={"80%"} mb={3} p={5}>
+              <Box
+                p={5}
+                shadow="md"
+                borderWidth="1px"
+                borderRadius="md"
+                borderColor={borderColor}
+              >
+                <Heading mb={4} textAlign="center" size="sm">
+                  Resume Lost? Worry not!
+                </Heading>
+
+                <Button
+                  width={{ base: "100%", sm: "auto" }}
+                  fontSize={{ base: "xs", sm: "sm", md: "md" }}
+                  colorScheme="purple"
+                  onClick={() => window.open(resumeLink, "_blank")}
+                >
+                  Resume
+                </Button>
+              </Box>
+            </Box>
             <Heading
               size="mb"
               textTransform="uppercase"
@@ -74,27 +92,7 @@ const About = () => {
           </Box>
         </Box>
 
-        <Box mx="auto" textAlign="center" boxSize={"20%"} mb={2}>
-          <Box
-            p={5}
-            shadow="md"
-            borderWidth="1px"
-            borderRadius="md"
-            borderColor={borderColor}
-          >
-            <Heading mb={4} textAlign="center" size="sm">
-              Resume Lost? Worry not!
-            </Heading>
-
-            <Button
-              colorScheme="purple"
-              onClick={() => window.open(resumeLink, "_blank")}
-            >
-              Resume
-            </Button>
-          </Box>
-        </Box>
-        <Center p={1} mt={4}>
+        <Center p={1} m={4}>
           <Image
             boxSize={"20%"}
             src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTJ6dzMyNmt0aTczeXZvOGF3dTJqbmwybzB6ODM3YzZ3YmhyMHRjZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vpAekUNSgb0k0/giphy.gif"

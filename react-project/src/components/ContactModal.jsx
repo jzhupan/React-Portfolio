@@ -9,7 +9,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 
-import ContactForm from "./ContactForm";
+import ContactForm from "./Projects/ContactForm";
 
 const ContactModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -25,7 +25,7 @@ const ContactModal = () => {
         Contact
       </Button>
       <Modal isOpen={isOpen} onClose={onClose} size="xl" isCentered="true">
-        <ModalOverlay />
+        <ModalOverlay backdropFilter="blur(10px) hue-rotate(80deg)" />
         <ModalContent width="95%">
           <ModalHeader size="xs" textTransform="uppercase" textAlign={"center"}>
             Let's Connect!

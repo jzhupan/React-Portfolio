@@ -2,8 +2,6 @@ import { ChakraProvider, extendTheme, Box } from "@chakra-ui/react";
 import "./App.css";
 import Footer from "./Components/Footer";
 
-import Logo from "./Components/Logo";
-import GridLayout from "./Components/GridLayout";
 import ResponsiveGrid from "./Components/ResponsiveGrid";
 
 const colors = {
@@ -52,11 +50,6 @@ const theme = extendTheme({
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      {/* <Box display="flex" justifyContent="center" alignItems="center">
-        <Logo />
-      </Box> */}
-      {/* <Tiles /> */}
-      {/* <GridLayout /> */}
       <ResponsiveGrid />
       <Footer />
     </ChakraProvider>

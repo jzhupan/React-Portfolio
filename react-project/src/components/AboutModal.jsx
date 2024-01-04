@@ -8,18 +8,30 @@ import {
   ModalCloseButton,
   useDisclosure,
 } from "@chakra-ui/react";
-import About from "./About";
+import About from "./Projects/About";
 
 const AboutModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <>
-      <Button mt={4} onClick={onOpen}>
+      <Button
+        mt={4}
+        onClick={onOpen}
+        className="modal-btn"
+        bg="none"
+        color="white"
+        fontWeight="bold"
+        fontSize="xl"
+        _hover={{
+          background: "none",
+          color: "white",
+        }}
+      >
         About
       </Button>
       <Modal isOpen={isOpen} onClose={onClose} size="xl" isCentered="true">
-        <ModalOverlay />
+        <ModalOverlay backdropFilter="blur(10px) hue-rotate(80deg)" />
         <ModalContent width="95%">
           <ModalHeader size="xs" textTransform="uppercase" textAlign={"center"}>
             Art Meets Code: Jennie's Creative Coding Odyssey

@@ -8,7 +8,7 @@ import {
   ModalCloseButton,
   useDisclosure,
 } from "@chakra-ui/react";
-import Project3 from "./Project3";
+import Project3 from "./Projects/Project3";
 
 const VSCodeTheme = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -24,7 +24,7 @@ const VSCodeTheme = () => {
         Visual Studio Code Theme
       </Button>
       <Modal isOpen={isOpen} onClose={onClose} size="xl" isCentered="true">
-        <ModalOverlay />
+        <ModalOverlay backdropFilter="blur(10px) hue-rotate(80deg)" />
         <ModalContent width="95%">
           <ModalHeader size="xs" textTransform="uppercase" textAlign={"center"}>
             Visual Studio Code Theme

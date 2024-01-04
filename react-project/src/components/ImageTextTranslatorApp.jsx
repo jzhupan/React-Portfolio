@@ -8,7 +8,7 @@ import {
   ModalCloseButton,
   useDisclosure,
 } from "@chakra-ui/react";
-import Project1 from "./Project1";
+import Project1 from "./Projects/Project1";
 
 const ImageTextTranslatorApp = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -24,7 +24,7 @@ const ImageTextTranslatorApp = () => {
         Image to Text Translator App
       </Button>
       <Modal isOpen={isOpen} onClose={onClose} size="xl" isCentered="true">
-        <ModalOverlay />
+        <ModalOverlay backdropFilter="blur(10px) hue-rotate(80deg)" />
         <ModalContent width="95%">
           <ModalHeader size="xs" textTransform="uppercase" textAlign={"center"}>
             Image to Text Translator App

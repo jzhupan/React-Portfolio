@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { Box, IconButton, useBoolean, Flex } from "@chakra-ui/react";
 import { FiPlay, FiPause, FiMaximize2 } from "react-icons/fi";
-import video from "../assets/project-img/demo.mp4";
+import video from "/src/assets/project-img/financial-pulse-demo.webm";
 
 const VideoPlayer = () => {
   const [isPlaying, setIsPlaying] = useBoolean();

@@ -11,11 +11,11 @@ import {
   ListItem,
 } from "@chakra-ui/react";
 import { css } from "@emotion/react";
-import VideoPlayer1 from "./VideoPlayer";
-import expressLogo from "../assets/tech-icons/Express.png";
-import bootStrapLogo from "../assets/tech-icons/Bootstrap.png";
-import axiosLogo from "../assets/tech-icons/Axios.png";
-import JavaScriptLogo from "../assets/tech-icons/JavaScript.png";
+import VideoPlayer2 from "./VideoPlayer2";
+import reactLogo from "/src/assets/tech-icons/React.png";
+import nextjsLogo from "/src/assets/tech-icons/Next.js.png";
+import axiosLogo from "/src/assets/tech-icons/Axios.png";
+import chakraUILogo from "/src/assets/tech-icons/chakraui.png";
 
 const slideIn = keyframes`
   from { transform: translateX(-20px); opacity: 0; }
@@ -29,8 +29,9 @@ const Project2 = () => {
     <div>
       <Stack spacing="4" width="full" mx="auto">
         <Box mx="auto" textAlign="center">
-          <VideoPlayer1 />
+          <VideoPlayer2 />
         </Box>
+
         <Box mx="auto">
           <Heading size="xs" textTransform="uppercase" m={1}>
             Notable Libraries / Frameworks used:
@@ -51,9 +52,9 @@ const Project2 = () => {
             align="center"
           >
             <Image
-              src={expressLogo}
+              src={reactLogo}
               boxSize="50px"
-              alt="Express Logo"
+              alt="React"
               transition="2s ease-in-out"
               _hover={{
                 transform: "scale(1.2)",
@@ -63,9 +64,9 @@ const Project2 = () => {
               `}
             />
             <Image
-              src={bootStrapLogo}
+              src={nextjsLogo}
               boxSize="50px"
-              alt="Bootstrap Logo"
+              alt="Next.js"
               transition="2s ease-in-out"
               _hover={{
                 transform: "scale(1.2)",
@@ -77,7 +78,7 @@ const Project2 = () => {
             <Image
               src={axiosLogo}
               boxSize="50px"
-              alt="Axios Logo"
+              alt="Axios"
               transition="2s ease-in-out"
               _hover={{
                 transform: "scale(1.2)",
@@ -87,9 +88,9 @@ const Project2 = () => {
               `}
             />
             <Image
-              src={JavaScriptLogo}
+              src={chakraUILogo}
               boxSize="50px"
-              alt="JavaScript Logo"
+              alt="Chakra UI"
               transition="2s ease-in-out"
               _hover={{
                 transform: "scale(1.2)",
@@ -112,37 +113,31 @@ const Project2 = () => {
           </Heading>
           <Box mx={"auto"} maxW={"80%"}>
             <Text pt="2" textAlign={"justify"}>
-              I developed an innovative{" "}
-              <strong>Optical Character Recognition (OCR) application</strong>{" "}
-              that seamlessly transforms images into editable text and offers
-              translation capabilities. This user-centric platform enables users
-              to effortlessly upload images with text, precisely crop the text
-              areas, and translate the content into English. Key highlights of
-              the project include:
+              Developed a user-centric <strong>Home page</strong> and a dynamic
+              router page for efficient display of stocks and financial data,
+              sourced from <strong>Financial Modeling Prep's API</strong>.
+              Engineered a feature-rich interface, including:
               <UnorderedList>
                 <ListItem>
-                  <strong>User-Friendly Interface:</strong> Designed with a
-                  focus on simplicity and efficiency, the app provides an
-                  intuitive experience, allowing users to navigate and perform
-                  tasks with ease.
+                  A comprehensive <strong>navigation bar</strong> for easy
+                  access to various sections.
                 </ListItem>
                 <ListItem>
-                  <strong>Cost-Effective Development:</strong> I strategically
-                  leveraged free resources during the development process, which
-                  not only optimized costs but also made the application more
-                  accessible to a broader audience.
+                  An intuitive <strong>search bar</strong> to quickly find
+                  specific stocks or financial data.
                 </ListItem>
                 <ListItem>
-                  <strong>Robust Back-End System:</strong> The app features a
-                  sophisticated back-end infrastructure that securely stores
-                  uploaded images locally. This system is designed to support
-                  multilingual functionality, catering to a diverse user base.
+                  A visually engaging <strong>marquee</strong> to highlight
+                  important financial news or trends.
                 </ListItem>
                 <ListItem>
-                  <strong>Comprehensive Language Support:</strong> For an
-                  extensive overview and demonstration of the various languages
-                  supported by the app, I encourage you to refer to the{" "}
-                  <strong>ReadMe</strong> file included with the application.
+                  A dedicated <strong>news section</strong> to keep users
+                  updated with the latest financial news.
+                </ListItem>
+                <ListItem>
+                  A sidebar displaying <strong>real-time stock data</strong>,
+                  such as current prices and percentage changes, for at-a-glance
+                  market insights.
                 </ListItem>
               </UnorderedList>
             </Text>
