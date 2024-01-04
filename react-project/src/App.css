@@ -33,6 +33,32 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+.rotate:hover {
+  animation: rotate 0.5s;
+}
+.shake:hover {
+  animation: shake 0.5s;
+}
+.jelly:hover {
+  animation: jelly 0.5s;
+}
+.pulse:hover {
+  animation: pulse 0.5s;
+}
+.bounce:hover {
+  animation: bounce 0.5s;
+}
+
+.flip:hover {
+  animation: flip 0.5s;
+}
+.shrink-halfway:hover {
+  animation: shrink-halfway 0.5s;
+}
+.grow:hover {
+  animation: grow 0.5s;
+}
+
 @keyframes shrink-halfway {
   0% {
     transform: scaleY(1);
@@ -92,13 +118,13 @@
 
 @keyframes flip {
   0% {
-    transform: scaleX(1);
+    transform: scaleY(1);
   }
   50% {
-    transform: scaleX(-1);
+    transform: scaleY(-1);
   }
   100% {
-    transform: scaleX(1);
+    transform: scaleY(1);
   }
 }
 
@@ -108,7 +134,7 @@
   }
 
   50% {
-    transform: scale(1.1);
+    transform: scale(1.3);
   }
 
   100% {

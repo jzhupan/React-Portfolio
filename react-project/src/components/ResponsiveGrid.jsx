@@ -16,6 +16,7 @@ import VSCodeTheme from "./VSCodeTheme";
 import AboutModal from "./AboutModal";
 import ContactModal from "./ContactModal";
 import Logo from "./Logo";
+import { useState } from "react";
 
 const theme = extendTheme({
   styles: {
@@ -58,6 +59,13 @@ const aboutTxt = "About me and my journey";
 const contactTxt = "Say Hi!";
 
 const ResponsiveGrid = () => {
+  const [hoverBgColor, setHoverBgColor] = useState("purple.500");
+
+  const handleMouseEnter = () => {
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    setHoverBgColor(randomColor);
+  };
+
   return (
     <ChakraProvider theme={theme}>
       <CSSReset />
@@ -84,7 +92,14 @@ const ResponsiveGrid = () => {
             <CatAnimation />
           </Flex>
         </GridItem>
-        <GridItem rowSpan={2} colSpan={1} w="100%" h="200" bg="purple.500">
+        <GridItem
+          rowSpan={2}
+          colSpan={1}
+          w="100%"
+          h="200"
+          bg="purple.500"
+          className="rotate"
+        >
           <Flex
             display="flex"
             justifyContent="center"
@@ -94,7 +109,14 @@ const ResponsiveGrid = () => {
             <ImageTextTranslatorApp />
           </Flex>
         </GridItem>
-        <GridItem rowSpan={2} colSpan={1} w="100%" h="200" bg="purple.500">
+        <GridItem
+          rowSpan={2}
+          colSpan={1}
+          w="100%"
+          h="200"
+          bg="purple.500"
+          className="shake"
+        >
           <Flex justifyContent="center" alignItems="center" height="180px">
             <FinancialPulseDashboard />
           </Flex>
@@ -111,7 +133,14 @@ const ResponsiveGrid = () => {
             <AnimatedBox />
           </Flex>
         </GridItem>
-        <GridItem rowSpan={2} colSpan={1} w="100%" h="200" bg="purple.500">
+        <GridItem
+          rowSpan={2}
+          colSpan={1}
+          w="100%"
+          h="200"
+          bg="purple.500"
+          className="jelly"
+        >
           <Flex justifyContent="center" alignItems="center" height="180px">
             <VSCodeTheme />
           </Flex>
@@ -126,15 +155,29 @@ const ResponsiveGrid = () => {
           className="hide-on-mobile"
         >
           <Flex justifyContent="center" alignItems="center" height="180px">
-            ✢
+            Coming Soon ✢✢✢
           </Flex>
         </GridItem>
-        <GridItem rowSpan={2} colSpan={1} w="100%" h="200" bg="purple.500">
+        <GridItem
+          rowSpan={2}
+          colSpan={1}
+          w="100%"
+          h="200"
+          bg="purple.500"
+          className="pulse"
+        >
           <Flex justifyContent="center" alignItems="center" height="180px">
             <AboutModal />
           </Flex>
         </GridItem>
-        <GridItem rowSpan={2} colSpan={1} w="100%" h="200" bg="purple.500">
+        <GridItem
+          rowSpan={2}
+          colSpan={1}
+          w="100%"
+          h="200"
+          bg="purple.500"
+          className="bounce"
+        >
           <Flex justifyContent="center" alignItems="center" height="180px">
             <ContactModal />
           </Flex>
