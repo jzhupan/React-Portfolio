@@ -41,31 +41,9 @@ const theme = extendTheme({
   },
 });
 
-const colors = [
-  "red.500",
-  "cyan.300",
-  "green.400",
-  "orange.300",
-  "pink.300",
-  "teal.200",
-  "pink.500",
-  "yellow.300",
-];
-
-const ProjectOneTxt = "April 2023";
-const ProjectTwoTxt = "September 2023";
-const ProjectThreeTxt = "December 2023";
-const aboutTxt = "About me and my journey";
-const contactTxt = "Say Hi!";
+const getRandomColor = () => colors[Math.floor(Math.random() * colors.length)];
 
 const ResponsiveGrid = () => {
-  const [hoverBgColor, setHoverBgColor] = useState("purple.500");
-
-  const handleMouseEnter = () => {
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    setHoverBgColor(randomColor);
-  };
-
   return (
     <ChakraProvider theme={theme}>
       <CSSReset />
@@ -85,7 +63,7 @@ const ResponsiveGrid = () => {
           colSpan={1}
           w="100%"
           h="100%"
-          bg="none"
+          bgColor="none"
           className="hide-on-mobile"
         >
           <Flex justifyContent="center" alignItems="center" height="50%">
@@ -126,7 +104,7 @@ const ResponsiveGrid = () => {
           colSpan={1}
           w="100%"
           h="200"
-          bg="none"
+          bgColor="none"
           className="hide-on-mobile"
         >
           <Flex justifyContent="center" alignItems="center" height="100%">
@@ -155,7 +133,7 @@ const ResponsiveGrid = () => {
           className="hide-on-mobile"
         >
           <Flex justifyContent="center" alignItems="center" height="180px">
-            Coming Soon ✢✢✢
+            ✢
           </Flex>
         </GridItem>
         <GridItem

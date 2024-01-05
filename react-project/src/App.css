@@ -33,23 +33,41 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/*
+const colors = [
+   "red.500 #E53E3E",
+   "cyan.300 #76E4F7",
+   "green.400 #48BB78",
+   "orange.300 #F6AD55",
+   "pink.300 #F687B3",
+   "teal.200 #B2F5EA",
+  "pink.500 #D53F8C",
+  "yellow.300 #F6E05E",
+ ];
+*/
+
 .rotate:hover {
   animation: rotate 0.5s;
+  background-color: #f6e05e;
 }
 .shake:hover {
   animation: shake 0.5s;
+  background-color: #e53e3e;
 }
 .jelly:hover {
   animation: jelly 0.5s;
+  background-color: #48bb78;
 }
 .pulse:hover {
   animation: pulse 0.5s;
+  background-color: #f687b3;
 }
 .bounce:hover {
   animation: bounce 0.5s;
+  background-color: #76e4f7;
 }
 
-.flip:hover {
+/* .flip:hover {
   animation: flip 0.5s;
 }
 .shrink-halfway:hover {
@@ -57,7 +75,7 @@
 }
 .grow:hover {
   animation: grow 0.5s;
-}
+} */
 
 @keyframes shrink-halfway {
   0% {
