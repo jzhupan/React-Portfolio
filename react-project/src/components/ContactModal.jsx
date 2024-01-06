@@ -19,8 +19,15 @@ const ContactModal = () => {
       <Button
         mt={4}
         onClick={onOpen}
-        w={["95%", "90%", "85%", "80%"]}
-        whiteSpace="normal"
+        className="modal-btn"
+        bg="none"
+        color="white"
+        fontWeight="bold"
+        fontSize="xl"
+        _hover={{
+          background: "none",
+          color: "white",
+        }}
       >
         Contact
       </Button>
