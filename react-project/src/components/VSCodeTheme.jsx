@@ -18,7 +18,15 @@ const VSCodeTheme = () => {
       <Button
         mt={4}
         onClick={onOpen}
-        w={["95%", "90%", "85%", "80%"]}
+        className="modal-btn"
+        bg="none"
+        color="white"
+        fontWeight="bold"
+        fontSize="xl"
+        _hover={{
+          background: "none",
+          color: "white",
+        }}
         whiteSpace="normal"
       >
         Visual Studio Code Theme

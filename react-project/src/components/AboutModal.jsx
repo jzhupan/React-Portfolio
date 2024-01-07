@@ -27,6 +27,7 @@ const AboutModal = () => {
           background: "none",
           color: "white",
         }}
+        whiteSpace="normal"
       >
         About
       </Button>

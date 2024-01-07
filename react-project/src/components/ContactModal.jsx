@@ -28,6 +28,7 @@ const ContactModal = () => {
           background: "none",
           color: "white",
         }}
+        whiteSpace="normal"
       >
         Contact
       </Button>

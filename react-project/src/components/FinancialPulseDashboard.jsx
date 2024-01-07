@@ -15,7 +15,20 @@ const FinancialPulseDashboard = () => {
 
   return (
     <>
-      <Button mt={4} onClick={onOpen}>
+      <Button
+        mt={4}
+        onClick={onOpen}
+        className="modal-btn"
+        bg="none"
+        color="white"
+        fontWeight="bold"
+        fontSize="xl"
+        _hover={{
+          background: "none",
+          color: "white",
+        }}
+        whiteSpace="normal"
+      >
         Financial Dashboard
       </Button>
       <Modal isOpen={isOpen} onClose={onClose} size="xl" isCentered="true">
