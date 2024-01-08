@@ -18,6 +18,8 @@ const AboutModal = () => {
       <Button
         mt={4}
         onClick={onOpen}
+        w="100%"
+        h="100%"
         className="modal-btn"
         bg="none"
         color="white"

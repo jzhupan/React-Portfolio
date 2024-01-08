@@ -16,7 +16,6 @@ import VSCodeTheme from "./VSCodeTheme";
 import AboutModal from "./AboutModal";
 import ContactModal from "./ContactModal";
 import Logo from "./Logo";
-import { useState } from "react";
 
 const theme = extendTheme({
   styles: {
@@ -40,8 +39,6 @@ const theme = extendTheme({
     xl: "1200px",
   },
 });
-
-const getRandomColor = () => colors[Math.floor(Math.random() * colors.length)];
 
 const ResponsiveGrid = () => {
   return (

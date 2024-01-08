@@ -7,12 +7,6 @@ import ResponsiveGrid from "./Components/ResponsiveGrid";
 const colors = {
   brand: {
     grey: "#1A202C",
-    black: "#000000",
-    white: "#FFFFFF",
-    cyan: "#76E4F7",
-    pink: "#D53F8C",
-    yellow: "#FAF089",
-    purple: "#9F7AEA",
   },
 };
 
