@@ -27,7 +27,7 @@ const About = () => {
               a decisive transition into the realm of programming, with a focus
               on <strong>front-end development</strong>. While I anticipated a
               smooth transition, the journey proved to be both challenging and
-              invigorating, pushing me out of my comfort zone and onto a path of{" "}
+              exciting, pushing me out of my comfort zone and onto a path of{" "}
               <strong>continuous growth and learning</strong>. In my commitment
               to this new career path, I have adopted a disciplined routine of
               daily <strong>GitHub commits</strong>. This practice goes beyond
@@ -37,7 +37,9 @@ const About = () => {
               constantly refining my front-end design skills. Leveraging my
               expertise in illustration and graphic design, my goal is to craft
               interfaces that are{" "}
-              <strong>visually compelling, functional, and user-centric</strong>
+              <strong>
+                visually compelling, functional, user-centric, and responsive
+              </strong>
               . Every step in this journey has been instrumental in sharpening
               my technical abilities and reaffirming my passion for evolving as
               a developer.
@@ -78,16 +80,16 @@ const About = () => {
                 Front-End Developer, Designer with a flair for Illustrator,
               </strong>{" "}
               I offer a unique fusion of creative talent and technical skills,
-              cultivated through hands-on experience. My foray into technology
-              is characterized by an unwavering dedication to mastering new
-              skills and expanding my knowledge base. I am eager to collaborate
-              with dynamic teams, confront complex challenges, and design
-              functional, <strong>visually appealing websites</strong>. My
-              primary objective is to deliver digital solutions that not only
-              align with business objectives but also captivate and engage their
-              target audience. I am committed to ensuring that each project I
-              undertake surpasses expectations, thereby contributing meaningful
-              and impactful work in the digital landscape.
+              cultivated through hands-on experience. My take into technology is
+              characterized by an unwavering dedication to mastering new skills
+              and expanding my knowledge base. I am eager to collaborate with
+              dynamic teams, confront complex challenges, and design functional,{" "}
+              <strong>visually appealing websites</strong>. My primary objective
+              is to deliver digital solutions that not only align with business
+              objectives but also captivate and engage their target audience. I
+              am committed to ensuring that each project I undertake surpasses
+              expectations, thereby contributing meaningful and impactful work
+              in the digital landscape.
             </Text>
           </Box>
         </Box>
