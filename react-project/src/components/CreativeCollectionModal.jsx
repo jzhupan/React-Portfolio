@@ -8,9 +8,10 @@ import {
   ModalCloseButton,
   useDisclosure,
 } from "@chakra-ui/react";
-import Project3 from "./Projects/Project3";
 
-const VSCodeTheme = () => {
+import QrCode from "./Projects/QrCode";
+
+const CreativeCollectionModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
@@ -31,17 +32,18 @@ const VSCodeTheme = () => {
         }}
         whiteSpace="normal"
       >
-        ✦ Visual Studio Code Theme ✦
+        ✦ Creative Collection ✦ <br />
+        More coming soon ( •̀ᴗ•́ ) ♡
       </Button>
       <Modal isOpen={isOpen} onClose={onClose} size="xl" isCentered="true">
         <ModalOverlay backdropFilter="blur(10px) hue-rotate(80deg)" />
         <ModalContent width="95%">
           <ModalHeader size="xs" textTransform="uppercase" textAlign={"center"}>
-            Visual Studio Code Theme
+            Creative Collection
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Project3 />
+            <QrCode />
           </ModalBody>
         </ModalContent>
       </Modal>
@@ -49,4 +51,4 @@ const VSCodeTheme = () => {
   );
 };
 
-export default VSCodeTheme;
+export default CreativeCollectionModal;

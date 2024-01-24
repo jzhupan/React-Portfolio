@@ -32,7 +32,7 @@ const ContactModal = () => {
         }}
         whiteSpace="normal"
       >
-        Contact
+        ✦ Contact ✦
       </Button>
       <Modal isOpen={isOpen} onClose={onClose} size="xl" isCentered="true">
         <ModalOverlay backdropFilter="blur(10px) hue-rotate(80deg)" />

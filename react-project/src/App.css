@@ -67,9 +67,11 @@ const colors = [
   background-color: #76e4f7;
 }
 
-/* .flip:hover {
+.flip:hover {
   animation: flip 0.5s;
 }
+
+/* 
 .shrink-halfway:hover {
   animation: shrink-halfway 0.5s;
 }

@@ -16,6 +16,7 @@ import VSCodeTheme from "./VSCodeTheme";
 import AboutModal from "./AboutModal";
 import ContactModal from "./ContactModal";
 import Logo from "./Logo";
+import CreativeCollectionModal from "./CreativeCollectionModal";
 
 const theme = extendTheme({
   styles: {
@@ -125,12 +126,12 @@ const ResponsiveGrid = () => {
           colSpan={1}
           w="100%"
           h="200"
-          bg="none"
+          bg="purple.500"
           color="white"
-          className="hide-on-mobile"
+          className="flip"
         >
           <Flex justifyContent="center" alignItems="center" height="180px">
-            ✢
+            <CreativeCollectionModal />
           </Flex>
         </GridItem>
         <GridItem
