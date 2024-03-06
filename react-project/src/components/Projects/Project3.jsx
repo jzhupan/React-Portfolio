@@ -8,6 +8,7 @@ import {
   Stack,
   UnorderedList,
   ListItem,
+  Button,
 } from "@chakra-ui/react";
 import vscodeTheme from "/src/assets/project-img/midnight-grape.png";
 import mgLogo from "/src/assets/project-img/mg-theme-logo.webp";
@@ -15,6 +16,7 @@ import VSIcon from "/src/assets/tech-icons/Visual-Studio.webp";
 
 const Project3 = () => {
   const borderColor = useColorModeValue("purple.500", "pink.300");
+  const githubLink = "https://github.com/jzhupan/vscode-theme";
 
   return (
     <div>
@@ -113,6 +115,16 @@ const Project3 = () => {
                 </ListItem>
               </UnorderedList>
             </Text>
+            <Box mx="auto" textAlign="center" boxSize={"80%"} mb={3} p={5}>
+              <Button
+                width={{ base: "100%", sm: "auto" }}
+                fontSize={{ base: "xs", sm: "sm", md: "md" }}
+                colorScheme="purple"
+                onClick={() => window.open(githubLink, "_blank")}
+              >
+                Repository
+              </Button>
+            </Box>
           </Box>
         </Box>
       </Stack>

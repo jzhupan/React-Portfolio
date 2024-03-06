@@ -69,6 +69,7 @@ const colors = [
 
 .flip:hover {
   animation: flip 0.5s;
+  background-color: #f6ad55;
 }
 
 /* 

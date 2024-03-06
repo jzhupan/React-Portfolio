@@ -9,6 +9,7 @@ import {
   keyframes,
   UnorderedList,
   ListItem,
+  Button,
 } from "@chakra-ui/react";
 import { css } from "@emotion/react";
 import VideoPlayer1 from "./VideoPlayer";
@@ -24,6 +25,7 @@ const slideIn = keyframes`
 
 const Project2 = () => {
   const borderColor = useColorModeValue("purple.500", "pink.300");
+  const githubLink = "https://github.com/jzhupan/Image-To-Text-Translator-App";
 
   return (
     <div>
@@ -146,6 +148,16 @@ const Project2 = () => {
                 </ListItem>
               </UnorderedList>
             </Text>
+            <Box mx="auto" textAlign="center" boxSize={"80%"} mb={3} p={5}>
+              <Button
+                width={{ base: "100%", sm: "auto" }}
+                fontSize={{ base: "xs", sm: "sm", md: "md" }}
+                colorScheme="purple"
+                onClick={() => window.open(githubLink, "_blank")}
+              >
+                Repository
+              </Button>
+            </Box>
           </Box>
         </Box>
       </Stack>

@@ -1,4 +1,4 @@
-import { ChakraProvider, extendTheme, Box } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import "./App.css";
 import Footer from "./Components/Footer";
 
@@ -7,6 +7,7 @@ import ResponsiveGrid from "./Components/ResponsiveGrid";
 const colors = {
   brand: {
     grey: "#171923",
+    white: "#F7FAFC",
   },
 };
 
