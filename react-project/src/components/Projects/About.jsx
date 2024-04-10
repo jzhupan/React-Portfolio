@@ -11,38 +11,37 @@ import {
 
 const About = () => {
   const resumeLink =
-    "https://drive.google.com/file/d/1TOnA3dFVL7ypvpbeB_c1EwnREd0b3JYA/preview";
+    "https://drive.google.com/file/d/19a8wgHnTq0R33Iw3X0CK0GDx6wUhn3zU/view";
   const borderColor = useColorModeValue("purple.500", "pink.300");
   return (
     <div>
       <Stack spacing="4" width="full" mx="auto">
         <Box mx="auto" width="100%">
           <Heading size="mb" textTransform="uppercase" textAlign={"center"}>
-            Early Career Summary:
+            About me:
           </Heading>
           <Box mx={"auto"} maxW={"80%"}>
             <Text pt="2" textAlign={"justify"} mb={2}>
-              After several years in{" "}
-              <strong>freelance illustration and graphic design</strong>, I made
-              a decisive transition into the realm of programming, with a focus
-              on <strong>front-end development</strong>. While I anticipated a
-              smooth transition, the journey proved to be both challenging and
-              exciting, pushing me out of my comfort zone and onto a path of{" "}
-              <strong>continuous growth and learning</strong>. In my commitment
-              to this new career path, I have adopted a disciplined routine of
-              daily <strong>GitHub commits</strong>. This practice goes beyond
-              mere code submissions; it represents my dedication to consistent
-              engagement in development work and my commitment to{" "}
-              <strong>perpetual improvement</strong>. Additionally, I am
-              constantly refining my front-end design skills. Leveraging my
-              expertise in illustration and graphic design, my goal is to craft
-              interfaces that are{" "}
-              <strong>
-                visually compelling, functional, user-centric, and responsive
-              </strong>
-              . Every step in this journey has been instrumental in sharpening
-              my technical abilities and reaffirming my passion for evolving as
-              a developer.
+              My name is Jennie Zhu Pan. I graduated with the Class of 2021 from
+              CUNY New York City College of Technology, where I earned a BFA in
+              Communication Design. There, I honed my skills in graphic design,
+              front-end web development, and illustration, and have since been
+              focusing on my visual design skills. Currently, I'm looking for
+              job opportunities to further refine my abilities and expand my
+              portfolio.
+              <br />
+              <br />
+              My passion lies in bringing ideas to life through visual design
+              and interactive media. I excel at creating art that tells a story
+              or conveys an idea. Achieving a JavaScript Development
+              Certification has further enhanced my coding skills, enabling me
+              to effectively collaborate with both UX/UI Designers and backend
+              developers. My design knowledge bridges communication gaps,
+              facilitating seamless integration between design and development.
+              I aim to innovate and deliver standout solutions in the realm of
+              visual communication. With a strong foundation in both design and
+              technology, I'm prepared to contribute to projects that engage
+              audiences and leave a lasting impact.
             </Text>
             <Box mx="auto" textAlign="center" boxSize={"80%"} mb={3} p={5}>
               <Box
@@ -66,7 +65,7 @@ const About = () => {
                 </Button>
               </Box>
             </Box>
-            <Heading
+            {/* <Heading
               size="mb"
               textTransform="uppercase"
               textAlign={"center"}
@@ -77,7 +76,7 @@ const About = () => {
             <Text pt="2" textAlign={"justify"} mb={2}>
               As an enthusiastic, self-taught{" "}
               <strong>
-                Front-End Developer, Designer with a flair for Illustrator,
+                Front-End Developer, Designer with a flair for Illustration,
               </strong>{" "}
               I offer a unique fusion of creative talent and technical skills,
               cultivated through hands-on experience. My take into technology is
@@ -90,16 +89,9 @@ const About = () => {
               am committed to ensuring that each project I undertake surpasses
               expectations, thereby contributing meaningful and impactful work
               in the digital landscape.
-            </Text>
+            </Text> */}
           </Box>
         </Box>
-
-        <Center p={1} m={4}>
-          <Image
-            boxSize={"20%"}
-            src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTJ6dzMyNmt0aTczeXZvOGF3dTJqbmwybzB6ODM3YzZ3YmhyMHRjZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vpAekUNSgb0k0/giphy.gif"
-          />
-        </Center>
       </Stack>
     </div>
   );
